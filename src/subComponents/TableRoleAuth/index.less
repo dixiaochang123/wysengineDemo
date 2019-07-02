@@ -1,0 +1,77 @@
+@import '../../styles/variables';
+
+.box {
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table tr {
+    height: 2rem;
+}
+
+.table th {
+    height: 2rem;
+    font-size: @f-t;
+    font-weight: normal;
+}
+
+.table th:first-child {
+    padding-left: 0.5rem;
+
+    .checkbox,
+    .checkboxActive {
+        margin-left: 2rem;
+    }
+
+}
+
+.table td {
+    height: 2rem;
+    font-size: @f-t;
+}
+
+.checkbox,
+.checkboxActive {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* bigscreen style */
+body[bigscreen='true'] {
+    .table th,
+    .table td {
+        font-size: @f-m;
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .table {
+        tr {
+            height: 4rem;
+        }
+
+        th,
+        td {
+            height: 4rem;
+            font-size: 1.2rem;
+        }
+
+    }
+
+    .checkbox,
+    .checkboxActive {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+}

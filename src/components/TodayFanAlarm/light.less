@@ -1,0 +1,38 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.overviewItem {
+    width: 24%;
+
+    &:before,
+    &:after {
+        display: none !important;
+    }
+
+}
+
+.overviewItem:first-child {
+    width: 28%;
+}
+
+.overviewItemInner {
+    box-shadow: @bs;
+    background-color: @c-white;
+    color: @c-black;
+}
+
+.distributionItemInner,
+.footerTable,
+.footerChart {
+    box-shadow: @bs;
+    background-color: @c-white;
+}
+
+.footerTable {
+    width: 100%;
+}

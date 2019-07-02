@@ -1,0 +1,59 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.lightStyle(@borderScale) {
+    .info {
+        .label {
+            color: @c-sub-title;
+        }
+
+        .val {
+            background-color: @c-con-bg;
+            color: @c-con;
+        }
+
+    }
+
+    .btnWrapper {
+        color: @c-con;
+        border: 0.05rem * @borderScale solid @c-border;
+        background-color: @c-border;
+    }
+
+    .tabs {
+        .tab {
+            border: 0.05rem * @borderScale solid @c-border;
+            background-color: #f7f7f7;
+            color: #596575;
+
+            &:first-child {
+                border-left: none;
+            }
+
+            &.active {
+                border: 0.05rem * @borderScale solid @c-blue-primary;
+                background-color: @c-blue-primary;
+                color: @c-white;
+            }
+
+        }
+
+    }
+
+}
+
+.box {
+    .lightStyle(1);
+}
+
+/* bigscreen style */
+body[bigscreen='true'] {
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .box {
+        .lightStyle(2);
+    }
+
+}

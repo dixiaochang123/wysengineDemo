@@ -1,0 +1,69 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        width: 100%;
+        height: 100%;
+        padding-left: 0.5rem * @scale;
+        padding-right: 0.5rem * @scale;
+
+        &.isFirst {
+            padding-left: 0;
+        }
+
+        &.isLast {
+            padding-right: 0;
+        }
+
+    }
+
+    .boxInner {
+        position: relative;
+        border-radius: 0.25rem * @scale;
+    }
+
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem * @scale 1.5rem * @scale 0;
+    }
+
+    .count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: @f-xxh * @scale;
+
+        img {
+            width: 1.4rem * @scale;
+            height: 1.4rem * @scale;
+            margin-right: 1.7rem * @scale;
+        }
+
+    }
+
+    .title {
+        font-size: @f-s * @scale;
+    }
+
+    .arrow {
+        position: relative;
+    }
+
+}
+
+.baseStyle(1);
+
+/* bigscreen style */
+body[bigscreen='true'] {
+    .baseStyle(1.2);
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(1.5);
+}

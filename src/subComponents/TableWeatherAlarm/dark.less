@@ -1,0 +1,30 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.table tr {
+    background-color: #1f253e;
+}
+
+.table tr.odd {
+    background-color: @c-con-bg;
+}
+
+.table tbody tr:hover {
+    background-color: @c-con-bg-h;
+}
+
+.table th {
+    color: @c-sub-title;
+}
+
+.table td {
+    color: @c-con;
+}
+
+.table tbody tr:hover {
+    th,
+    td {
+        color: @c-white;
+    }
+
+}

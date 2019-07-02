@@ -1,0 +1,282 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1rem * @scale;
+    }
+
+    .charts {
+        position: relative;
+        width: 100%;
+    }
+
+    .row {
+        width: 100%;
+        height: 12rem * @scale;
+        margin-bottom: 1rem * @scale;
+    }
+
+    .chart {
+        width: 38%;
+        height: 100%;
+    }
+
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30rem * @scale;
+        height: 30rem * @scale;
+        margin-top: -15rem * @scale;
+        margin-left: -15rem * @scale;
+        border-radius: 15rem * @scale;
+
+        canvas {
+            z-index: 100 !important;
+        }
+
+    }
+
+    .types {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 9rem * @scale;
+        margin-top: 1rem * @scale;
+    }
+
+    .type {
+        width: 20%;
+        height: 100%;
+    }
+
+    .total {
+        position: absolute;
+        z-index: 100;
+        bottom: -1rem * @scale;
+        width: 100%;
+        text-align: center;
+    }
+
+    .totalCount {
+        display: block;
+        width: 3.5rem * @scale;
+        height: 3.5rem * @scale;
+        line-height: 3.5rem * @scale;
+        margin: 0 auto 1.2rem * @scale;
+        border-radius: 1.75rem * @scale;
+        font-size: @f-h * @scale;
+        text-align: center;
+    }
+
+    .totalTxt {
+        display: block;
+        font-size: @f-s * @scale;
+    }
+
+}
+
+.baseStyle(1);
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .center {
+        width: 36rem;
+        height: 36rem;
+        margin-top: -18rem;
+        margin-left: -18rem;
+        border-radius: 18rem;
+    }
+
+    .totalCount {
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        margin: 0 auto 1.2rem;
+        border-radius: 1.75rem;
+        font-size: @f-xh;
+    }
+
+    .totalTxt {
+        font-size: @f-xl;
+    }
+
+}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+    .center {
+        width: 36rem;
+        height: 36rem;
+        margin-top: -18rem;
+        margin-left: -18rem;
+        border-radius: 18rem;
+    }
+
+    .totalCount {
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        margin: 0 auto 1.2rem;
+        border-radius: 1.75rem;
+        font-size: @f-xh;
+    }
+
+    .totalTxt {
+        font-size: @f-xl;
+    }
+
+}
+
+/* mediumscreen style: 1600 * 900 */
+body[mediumscreen='true'] {
+    .center {
+        width: 34rem;
+        height: 34rem;
+        margin-top: -17rem;
+        margin-left: -17rem;
+        border-radius: 17rem;
+    }
+
+    .total {
+        bottom: 1rem;
+    }
+
+    .totalCount {
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        margin: 0 auto 1.2rem;
+        border-radius: 1.75rem;
+        font-size: @f-xh;
+    }
+
+    .totalTxt {
+        font-size: @f-xl;
+    }
+
+}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {
+    .center {
+        width: 40rem;
+        height: 40rem;
+        margin-top: -20rem;
+        margin-left: -20rem;
+        border-radius: 20rem;
+    }
+
+    .total {
+        bottom: 1rem;
+    }
+
+    .totalCount {
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        margin: 0 auto 1.2rem;
+        border-radius: 1.75rem;
+        font-size: @f-xh;
+    }
+
+    .totalTxt {
+        font-size: @f-xl;
+    }
+
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .baseStyle(@big);
+
+    .center {
+        width: 40rem;
+        height: 40rem;
+        margin-top: -20rem;
+        margin-left: -20rem;
+        border-radius: 20rem;
+    }
+
+    .total {
+        bottom: 4rem;
+    }
+
+    .totalCount {
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        margin: 0 auto 1.2rem;
+        border-radius: 1.75rem;
+        font-size: @f-xh;
+    }
+
+    .totalTxt {
+        font-size: @f-xl;
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(@big);
+
+    .center {
+        width: 40rem;
+        height: 40rem;
+        margin-top: -20rem;
+        margin-left: -20rem;
+        border-radius: 20rem;
+    }
+
+    .total {
+        bottom: 3rem;
+    }
+
+    .totalCount {
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        margin: 0 auto 1.2rem;
+        border-radius: 1.75rem;
+        font-size: @f-xh;
+    }
+
+    .totalTxt {
+        font-size: @f-xl;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(@msbig);
+
+    .center {
+        width: 50rem;
+        height: 50rem;
+        margin-top: -25rem;
+        margin-left: -25rem;
+        border-radius: 25rem;
+    }
+
+    .total {
+        bottom: 5rem;
+    }
+
+    .totalCount {
+        width: 5rem;
+        height: 5rem;
+        line-height: 5rem;
+        margin: 0 auto 1.2rem;
+        border-radius: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .totalTxt {
+        font-size: 1.4rem;
+    }
+
+}

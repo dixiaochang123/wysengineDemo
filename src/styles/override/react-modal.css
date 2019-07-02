@@ -1,0 +1,26 @@
+/* base style */
+.ReactModal__Overlay {
+    background: rgba(0, 0, 0, 0.7) !important;
+    z-index: 100 !important;
+}
+
+.ReactModal__Content {
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding-top: 5rem !important;
+    border-radius: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    pointer-events: none;
+    text-align: center;
+}
+
+.ReactModal__Content * {
+    pointer-events: all;
+}
+
+body[bigscreen='true'] .ReactModal__Content {
+    padding-top: 10rem !important;
+}

@@ -1,0 +1,175 @@
+/* base style */
+.rc-pagination-simple > li,
+.rc-pagination-simple .rc-pagination-simple-pager {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.rc-pagination-simple .rc-pagination-simple-pager {
+    margin-right: 0;
+}
+
+.rc-pagination-prev + .rc-pagination-simple-pager {
+    margin-right: 0.4rem;
+}
+
+.rc-pagination-simple .rc-pagination-simple-pager input,
+.rc-pagination-simple .rc-pagination-simple-pager button {
+    display: inline-block;
+    width: 2rem;
+    height: 0.8rem;
+    text-align: center;
+}
+
+.rc-pagination-prev + .rc-pagination-simple-pager,
+.rc-pagination-simple .rc-pagination-simple-pager input,
+.rc-pagination-simple .rc-pagination-simple-pager input:hover,
+.rc-pagination-simple .rc-pagination-simple-pager button,
+.rc-pagination-simple .rc-pagination-simple-pager button:hover,
+.rc-pagination-simple .rc-pagination-simple-pager button:active,
+.rc-pagination-simple .rc-pagination-simple-pager button:focus,
+.rc-pagination-simple .rc-pagination-simple-pager .rc-pagination-slash {
+    border-radius: 0;
+    border-color: #959595;
+    background-color: transparent;
+    color: #959595;
+    font-size: 0.6rem;
+    text-align: center;
+    padding-top: 0.2rem;
+}
+
+.rc-pagination-simple .rc-pagination-simple-pager button {
+    margin-top: 0.1rem;
+    border-color: transparent;
+}
+
+.rc-pagination-simple .rc-pagination-simple-pager button:hover,
+.rc-pagination-simple .rc-pagination-simple-pager button:active,
+.rc-pagination-simple .rc-pagination-simple-pager button:focus {
+    border-color: transparent;
+    color: #707070;
+}
+
+.rc-pagination-simple .rc-pagination-prev,
+.rc-pagination-simple .rc-pagination-next {
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.rc-pagination-prev,
+.rc-pagination-next {
+    width: 0.8rem;
+    min-width: 0.8rem;
+    height: 100%;
+    border: none;
+}
+
+.rc-pagination-prev {
+    margin-right: 0.1rem;
+}
+
+.rc-pagination-prev:after {
+    display: block;
+    content: '«';
+    color: #959595;
+    font-size: 1rem;
+}
+
+.rc-pagination-next {
+    margin-left: 0.1rem;
+}
+
+.rc-pagination-next:after {
+    display: block;
+    content: '»';
+    color: #959595;
+    font-size: 1rem;
+}
+
+.rc-pagination-prev:hover:after,
+.rc-pagination-next:hover:after {
+    color: #707070;
+}
+
+.rc-pagination-prev a:after,
+.rc-pagination-next a:after {
+    display: block;
+    content: '';
+}
+
+.rc-pagination-simple .rc-pagination-simple-pager input {
+    min-height: 0.9rem;
+    margin: 0 0.4rem;
+    padding: 0.25rem 0.4rem;
+    border: 0.05rem solid #959595;
+    outline: none;
+}
+
+/* dark theme style */
+body[theme='dark'] .rc-pagination-simple .rc-pagination-simple-pager button:hover,
+body[theme='dark'] .rc-pagination-simple .rc-pagination-simple-pager button:active,
+body[theme='dark'] .rc-pagination-simple .rc-pagination-simple-pager button:focus,
+body[theme='dark'] .rc-pagination-prev:hover:after,
+body[theme='dark'] .rc-pagination-next:hover:after {
+    color: #fff;
+}
+
+
+/* bigscreen style */
+body[bigscreen='true'] .rc-pagination-prev + .rc-pagination-simple-pager,
+body[bigscreen='true'] .rc-pagination-simple .rc-pagination-simple-pager input,
+body[bigscreen='true'] .rc-pagination-simple .rc-pagination-simple-pager button,
+body[bigscreen='true'] .rc-pagination-simple .rc-pagination-simple-pager button:hover,
+body[bigscreen='true'] .rc-pagination-simple .rc-pagination-simple-pager button:active,
+body[bigscreen='true'] .rc-pagination-simple .rc-pagination-simple-pager button:focus,
+body[bigscreen='true'] .rc-pagination-simple .rc-pagination-simple-pager .rc-pagination-slash {
+    font-size: 0.8rem;
+}
+
+body[bigscreen='true'] .rc-pagination-prev,
+body[bigscreen='true'] .rc-pagination-next {
+    padding-top: 0.2rem;
+}
+
+body[bigscreen='true'] .rc-pagination-simple .rc-pagination-simple-pager input,
+body[bigscreen='true'] .rc-pagination-simple .rc-pagination-simple-pager button {
+    display: inline-block;
+    width: 3rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    text-align: center;
+}
+
+/* microsoft bigscreen style  */
+body[bigscreenmicrosoft='true'] .rc-pagination-prev + .rc-pagination-simple-pager,
+body[bigscreenmicrosoft='true'] .rc-pagination-simple .rc-pagination-simple-pager input,
+body[bigscreenmicrosoft='true'] .rc-pagination-simple .rc-pagination-simple-pager button,
+body[bigscreenmicrosoft='true'] .rc-pagination-simple .rc-pagination-simple-pager button:hover,
+body[bigscreenmicrosoft='true'] .rc-pagination-simple .rc-pagination-simple-pager button:active,
+body[bigscreenmicrosoft='true'] .rc-pagination-simple .rc-pagination-simple-pager button:focus,
+body[bigscreenmicrosoft='true'] .rc-pagination-simple .rc-pagination-simple-pager .rc-pagination-slash {
+    font-size: 1.3rem;
+}
+
+body[bigscreenmicrosoft='true'] .rc-pagination-prev,
+body[bigscreenmicrosoft='true'] .rc-pagination-next {
+    width: 2.8rem;
+    height: 2rem;
+    line-height: 2rem;
+    background-size: 2rem 1rem;
+}
+
+body[bigscreenmicrosoft='true'] .rc-pagination-prev:after,
+body[bigscreenmicrosoft='true'] .rc-pagination-next:after {
+    font-size: 2rem;
+}
+
+body[bigscreenmicrosoft='true'] .rc-pagination-simple .rc-pagination-simple-pager input,
+body[bigscreenmicrosoft='true'] .rc-pagination-simple .rc-pagination-simple-pager button {
+    display: inline-block;
+    width: 5rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}

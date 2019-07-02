@@ -1,0 +1,78 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.box {
+    background-color: #404853;
+}
+
+.menuItem {
+    color: #f1f1f1;
+
+    &:hover,
+    &:active {
+        background-color: #343a43;
+    }
+
+    &:before {
+        background-color: #707070;
+    }
+
+}
+
+.paths,
+.pathLink,
+.pathLinkSep {
+    color: #707070;
+}
+
+.paths a {
+    &:hover {
+        color: #000000;
+    }
+}
+
+.pathLink:hover {
+    color: #000000;
+}
+
+.pathLinkSep {
+    background: url(../../images/common/icon_arrow.png) no-repeat 0 0;
+    background-size: 0.8rem 0.45rem;
+    color: #535353;
+}
+
+.subMenus,
+.subAreas {
+    border: 0.05rem solid @c-border;
+    background-color: @c-white;
+    box-shadow: @bs;
+}
+
+.area {
+    border-bottom: 0.05rem solid @c-border;
+    background-color: @c-white;
+    color: @c-con;
+
+    &:hover,
+    &.active {
+        background-color: #f5f5f5;
+        color: #408ef0;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+}
+
+.subModules {
+    background-color: @c-white;
+    box-shadow: @bs;
+}
+
+.subModuleRow {
+    .module {
+        color: @c-con;
+    }
+
+}

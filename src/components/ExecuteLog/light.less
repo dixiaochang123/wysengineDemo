@@ -1,0 +1,39 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.lightStyle(@borderRadius) {
+    .warningCountText {
+        color: #aaa;
+    }
+
+    .tables {
+        .tablePanels {
+            overflow: hidden;
+            border-radius: 0.25rem * @borderRadius;
+            border: 0.05rem * @borderRadius solid @c-border;
+            box-shadow: @bs;
+        }
+
+    }
+
+    .addIcon {
+        background: url(images/common/add.png) no-repeat 50% 50%;
+    }
+
+    .addIcon:hover {
+        background: url(images/common/add_fk.png) no-repeat 50% 50%;
+    }
+
+}
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.lightStyle(1);
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .lightStyle(2);
+}

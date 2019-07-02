@@ -1,0 +1,181 @@
+/* 打包明阳 */
+    /* 主要修改 */
+    wysengineDemo\src\constant\index.js
+    wysengineDemo\src\index.html
+    wysengineDemo\src\indexforpages.html
+    /* 标签页缩略图 */
+    wysengineDemo\favicon.ico
+    wysengineDemo\faviconmy.ico
+
+/* 打包UI改版智擎版、协和 */
+    /* 主要修改 */
+    wysengineDemo\src\constant\index.js
+    wysengineDemo\src\index.html
+    wysengineDemo\src\indexforpages.html
+    wysengineDemo\src\components\Login\index.js
+    wysengineDemo\src\subComponents\Navbar\index.js
+    /* 标签页缩略图 */
+    wysengineDemo\favicon.ico
+    wysengineDemo\faviconwysengine.ico
+
+/* 大屏修正echarts图表配置 */
+option = Object.assign({}, option, Utils.fixChartOption(option));
+if ($(document.body).attr('bigscreenmisrosoft') == 'true') {}
+
+/* 各种分辨率样式查询条件 */
+/* basescreen style: 1920 * 1080 */
+body[basescreen='true'] {}
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {}
+
+/* mediumscreen style: 1600 * 900 */
+body[mediumscreen='true'] {}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {}
+
+/* 屏幕尺寸对象 */
+const SCREEN_TYPES = {
+    miniscreen: {},
+    smallscreen: {},
+    mediumscreen: {},
+    highmediumscreen: {},
+    basescreen: {},
+    highscreen: {},
+    bigscreen: {},
+    bigscreenmicrosoft: {}
+};
+
+/* 有权限控制的页面 */
+auth
+company
+department
+home
+log
+logSetting
+menu
+model
+modelBackground
+module
+param
+paramType
+report
+role
+statistics
+turbineConfig
+user
+workbench
+
+/* 权限控制模块中英文名称map */
+const MODULE_MAP = {
+    '公司': 'company',
+    '参数': 'param',
+    '参数类型': 'paramType',
+    '工作平台': 'workbench',
+    '日志': 'log',
+    '日志配置': 'logSetting',
+    '权限': 'auth',
+    '模块': 'module',
+    '模型后台管理': 'modelBackground',
+    '模型管理': 'model',
+    '用户': 'user',
+    '统计分析': 'statistics',
+    '菜单': 'menu',
+    '角色': 'role',
+    '通用点表': 'turbineConfig',
+    '部门': 'department',
+    '首页': 'home'
+};
+
+/* partial router */
+===========================================
+===========================================
+areaalarm
+kpistatistics
+homepage
+login
+logsetting
+menus: 导出失败
+modeldetail: 导出有bug
+models
+modules
+reportmanagement
+reportmanagementmonthly
+reportmanagementyear
+rolemanagement
+todayfanalarm
+warninginfordetails
+workbench
+personinfo
+privilegemanagement
+parameterconfigurationmanagement
+
+/* other router */
+=====================================================
+=====================================================
+companymanagement
+departmentmanagement
+mtbfchange
+powergain
+productivity
+regionalendrate
+regionalhealth
+totalcompletionrate
+totalhealth
+usermanagement
+warningstatistics 最后重构
+logmanagement
+parametermanagement
+universaltable
+modelbackmanagement
+
+/* all router */
+=====================================================
+=====================================================
+areaalarm
+companymanagement
+departmentmanagement
+homepage
+kpistatistics
+login
+logsetting
+menus
+modeldetail
+models
+modules
+mtbfchange
+powergain
+productivity
+regionalendrate
+regionalhealth
+reportmanagement
+reportmanagementmonthly
+reportmanagementyear
+rolemanagement
+todayfanalarm
+totalcompletionrate
+totalhealth
+usermanagement
+warninginfordetails
+warningstatistics
+workbench
+personinfo
+privilegemanagement
+logmanagement
+parametermanagement
+parameterconfigurationmanagement
+universaltable
+modelbackmanagement

@@ -1,0 +1,58 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.viewSwitch {
+    border: 0.05rem solid @c-border;
+
+    span {
+        background-color: #272f4e;
+        color: @c-con;
+    }
+
+}
+
+.yjtableTitle {
+    background: url(images/warninginfordetails/sj2.png) no-repeat 77% 55%;
+    background-size: 0.8rem;
+}
+
+.exportIcon {
+    background: url(images/models/icon_export_dark.png) no-repeat 50% 50%;
+}
+
+.exportIcon:hover {
+    background: url(images/models/icon_export_dark_fk.png) no-repeat 50% 50%;
+}
+
+.addIcon {
+    background: url(images/common/add_dark.png) no-repeat 50% 50%;
+}
+
+.addIcon:hover {
+    background: url(images/common/add_dark_fk.png) no-repeat 50% 50%;
+}
+
+.tabs {
+    .tab {
+        color: @c-con;
+
+        &.active {
+            color: @c-white;
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .yjtableTitle {
+        background-size: 1rem;
+    }
+
+}

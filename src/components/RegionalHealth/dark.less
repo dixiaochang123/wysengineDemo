@@ -1,0 +1,32 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.box {
+    color: @c-white;
+}
+
+.boxInner {
+    background-color: @c-bg;
+    box-shadow: @bs;
+}
+
+.subTitle {
+    a {
+        &:first-of-type {
+            background-color: #1a2037;
+            color: #727d9d;
+        }
+
+        &:last-of-type {
+            background-color: #1f253e;
+            color: @c-white;
+        }
+
+    }
+
+}

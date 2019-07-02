@@ -1,0 +1,58 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.tab {
+    background: url(images/warninginfordetails/sj2.png) no-repeat 93% 55%;
+    background-color: #1a2037;
+    color: #727d9d;
+}
+
+.tab:hover,
+.tabActive {
+    background: url(images/warninginfordetails/sj1.png) no-repeat 93% 55%;
+    background-color: #1f253e;
+    color: @c-white;
+}
+
+.tabLast:after {
+    top: -2rem;
+    right: -2rem;
+    border-top: 2rem solid transparent;
+    border-bottom: 2rem solid @c-bg;
+    border-left: 2rem solid transparent;
+    border-right: 2rem solid transparent;
+}
+
+.titleIcon {
+    border-top: 0.05rem solid @c-white;
+    background: transparent url(../../images/common/icon_right.png) no-repeat 50% 50%;
+    background-size: 1.4rem 1.4rem;
+}
+
+.secondChartInner {
+    border-left: 0.05rem solid transparent;
+    background-color: @c-blue-thi;
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+
+body[bigscreenmicrosoft='true'] {
+    .tab {
+        background: url(images/warninginfordetails/sj2.png) no-repeat 95% 55%;
+        background-color: #1a2037;
+        background-size: 1rem;
+    }
+
+    .tab:hover,
+    .tabActive {
+        background: url(images/warninginfordetails/sj1.png) no-repeat 95% 55%;
+        background-color: #1f253e;
+        background-size: 1rem;
+    }
+
+}

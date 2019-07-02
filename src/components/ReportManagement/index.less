@@ -1,0 +1,171 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale, @borderScale) {
+    .box {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1rem * @scale;
+    }
+
+    .boxInner {
+        width: 100%;
+        height: 100%;
+        min-height: 40rem * @scale;
+
+        .panelBody {
+            padding-left: 1.4rem * @scale;
+            padding-right: 1.4rem * @scale;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .subTitle {
+            display: flex;
+            font-size: @f-t * @scale;
+
+            a {
+                display: inline-block;
+                margin-top: 1rem * @scale;
+                margin-right: 2rem * @scale;
+
+                &.active {
+                    border-bottom: 0.05rem * @borderScale solid @c-blue-primary;
+                    cursor: default;
+                }
+
+            }
+
+            .dropdownTime {
+                width: 11.5rem * @scale;
+                margin-top: 0.5rem * @scale;
+                margin-right: 1rem * @scale;
+            }
+
+        }
+
+        .exportBtn {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 0.5rem * @scale;
+
+            img {
+                width: 0.8rem * @scale;
+                height: 1rem * @scale;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+    .selectedWindsites {
+        max-width: 37rem * @scale;
+        height: 1.5rem * @scale;
+        line-height: 1.5rem * @scale;
+        margin-top: 0.5rem * @scale;
+        margin-left: 1rem * @scale;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1rem * @scale;
+        padding-bottom: 0.5rem * @scale;
+        border-bottom: 0.05rem * @borderScale solid @c-blue-primary;
+        font-size: @f-t * @scale;
+
+        img {
+            cursor: pointer;
+        }
+
+    }
+
+}
+
+.baseStyle(1, 1);
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+    .boxInner {
+        .subTitle {
+            a.active {
+                padding-bottom: 0.5rem;
+            }
+
+        }
+
+    }
+
+}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {
+    .baseStyle(1.2, 1);
+
+    .boxInner {
+        .subTitle {
+            .dropdownTime {
+                margin-top: 0.9rem;
+            }
+
+        }
+
+    }
+
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .baseStyle(1.5, 1);
+
+    .boxInner {
+        .subTitle {
+            .dropdownTime {
+                margin-top: 1.3rem;
+            }
+
+        }
+
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(1.5, 1);
+
+    .boxInner {
+        .subTitle {
+            .dropdownTime {
+                margin-top: 1.5rem;
+            }
+
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(2, 2);
+
+    .boxInner {
+        .subTitle {
+            .dropdownTime {
+                margin-top: 1.5rem;
+            }
+
+        }
+
+    }
+
+}

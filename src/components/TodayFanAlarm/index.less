@@ -1,0 +1,97 @@
+@import '../../styles/variables';
+
+.box {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+}
+
+.overview {
+    width: 100%;
+    height: 4rem;
+
+    > div {
+        height: 100%;
+    }
+
+}
+
+.overviewItem {
+    height: 100%;
+    padding-left: 1rem;
+}
+
+.overviewItem:first-child {
+    padding-left: 0;
+}
+
+.overviewItem:first-child:after {
+    left: 0;
+}
+
+.overviewItemInner {
+    width: 100%;
+    height: 100%;
+    font-size: @f-l;
+    border-radius: 10px;
+}
+
+.overviewCount {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: @f-xxh;
+}
+
+.distribution {
+    width: 100%;
+    height: 16rem;
+    margin-top: 1rem;
+}
+
+.distributionItem {
+    width: 50%;
+    height: 100%;
+    padding-left: 0.5rem;
+}
+
+.distributionItem:first-child {
+    padding-left: 0;
+    padding-right: 0.5rem;
+}
+
+.distributionItemInner {
+    width: 100%;
+    height: 100%;
+}
+
+.chartWrapper {
+    position: relative;
+}
+
+.footer {
+    width: 100%;
+    height: 18.5rem;
+    margin-top: 1rem;
+
+    > div {
+        height: 100%;
+    }
+
+}
+
+.footerTable {
+    height: 100%;
+}
+
+.footerChart {
+    height: 100%;
+    padding-right: 1.5rem;
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .footer {
+        height: 22rem !important;
+    }
+
+}

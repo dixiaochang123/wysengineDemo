@@ -1,0 +1,245 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale, @borderScale) {
+    .box {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .formWrapper {
+        position: absolute;
+        top: 25% * @scale;
+        right: 10% * @scale;
+        width: 26.5rem * @scale;
+        height: 26.5rem * @scale;
+        padding-top: 5.5rem * @scale;
+        border-radius: 0.5rem * @scale;
+        box-shadow: 0 0 5rem * @scale @c-white inset;
+        overflow: hidden;
+    }
+
+    .panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5.5rem * @scale;
+        line-height: 5.5rem * @scale;
+        padding-left: 1.4rem * @scale;
+        background: -webkit-linear-gradient(to bottom, #4996f6, #2663bd);
+        background: -moz-linear-gradient(to bottom, #4996f6, #2663bd);
+        background: linear-gradient(to bottom, #4996f6, #2663bd);
+        background-color: #4996f6;
+
+        > img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 2.5rem * @scale;
+            height: 2.5rem * @scale;
+            margin-right: 1rem * @scale;
+
+            &.wide {
+                width: 3.5rem * @scale;
+                height: 2.5rem * @scale;
+            }
+
+        }
+
+    }
+
+    .title {
+        display: inline-block;
+        vertical-align: middle;
+        color: @c-white;
+        font-size: 1.3rem * @scale;
+    }
+
+    .err {
+        position: absolute;
+        top: 6.5rem * @scale;
+        left: 0;
+        width: 100%;
+        color: #f00;
+        font-size: @f-xl * @scale;
+        text-align: center;
+    }
+
+    .form {
+        width: 100%;
+        height: 100%;
+        padding: 2.7rem * @scale 2.8rem * @scale;
+        background-color: rgba(255, 255, 255, 0.1);
+        color: @c-white;
+        font-size: @f-l * @scale;
+    }
+
+    .formItem {
+        position: relative;
+        width: 100%;
+        height: 3.2rem * @scale;
+        line-height: 3.2rem * @scale;
+        margin-bottom: 1.7rem * @scale;
+        padding-left: 3.2rem * @scale;
+        border-bottom: 0.05rem * @borderScale solid @c-white;
+    }
+
+    .formLable {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3.2rem * @scale;
+        height: 100%;
+        background-color: #d0daef;
+
+        img {
+            width: auto;
+            height: 1.7rem * @scale;
+            margin: 0 auto;
+        }
+
+    }
+
+    .formInput {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        height: 3.2rem * @scale;
+        line-height: 3.2rem * @scale;
+        padding-left: 1rem * @scale;
+        padding-right: 1rem * @scale;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        color: @c-white;
+    }
+
+    input:-webkit-autofill {
+        background-color: @c-white !important;
+        -webkit-box-shadow: inset 0 0 0 100rem @c-white !important;
+        opacity: 0.2;
+    }
+
+    input::placeholder,
+    input::-moz-placeholder,
+    input:-ms-input-placeholder,
+    input::-ms-input-placeholder,
+    input::-webkit-input-placeholder {
+        color: @c-white;
+    }
+
+    .formBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 3.4rem * @scale;
+        margin: 1rem * @scale auto 0;
+        border-top: 0.05rem solid #a8cfff;
+        background: -webkit-linear-gradient(to bottom, #4996f6, #2663bd);
+        background: -moz-linear-gradient(to bottom, #4996f6, #2663bd);
+        background: linear-gradient(to bottom, #4996f6, #2663bd);
+        background-color: #4996f6;
+        color: @c-white;
+        font-size: @f-xh * @scale;
+        text-align: center;
+        cursor: pointer;
+
+        img {
+            width: 1.1rem * @scale;
+            height: 1.1rem * @scale;
+            margin-left: 0.2rem * @scale;
+        }
+
+    }
+
+    .formBtn1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 3.4rem * @scale;
+        margin: 1rem * @scale auto 0;
+        border-top: 0.05rem solid #a8cfff;
+        background-color: #3f8eef;
+        color: @c-white;
+        font-size: @f-xh * @scale;
+        text-align: center;
+        cursor: pointer;
+
+        img {
+            width: 1.1rem * @scale;
+            height: 1.1rem * @scale;
+            margin-left: 0.2rem * @scale;
+        }
+
+    }
+
+}
+
+.baseStyle(1, 1);
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .baseStyle(1.2, 1);
+}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+    .baseStyle(1.1, 1);
+
+    .formWrapper {
+        top: 25%;
+    }
+
+}
+
+/* mediumscreen style: 1600 * 900 */
+body[mediumscreen='true'] {
+    .baseStyle(1.05, 1);
+
+    .formWrapper {
+        top: 25%;
+    }
+
+}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {
+    .baseStyle(1.1, 1);
+
+    .formWrapper {
+        top: 26%;
+    }
+
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .baseStyle(1.35, 1);
+
+    .formWrapper {
+        top: 26%;
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(1.43, 1);
+
+    .formWrapper {
+        top: 26%;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(1.5, 2);
+
+    .formWrapper {
+        top: 13%;
+    }
+
+}

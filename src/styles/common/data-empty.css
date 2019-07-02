@@ -1,0 +1,24 @@
+.dataEmpty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/common/zwsj_q.png) no-repeat center center !important;
+    background-size: 50% 50%;
+}
+
+/* dark theme style */
+body[theme='dark'] .dataEmpty {
+    background: url(../../images/common/zwsj_s.png) no-repeat center center !important;
+}
+
+/* miniscreen style */
+body[miniscreen='true'] .dataEmpty {
+    background-size: 30% 50% !important;
+}
+
+/* microsoft bigscreen style */
+body[bigscreenmicrosoft='true'] .dataEmpty {
+    background-size: 20% 50% !important;
+}

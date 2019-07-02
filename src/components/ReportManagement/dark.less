@@ -1,0 +1,23 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+    color: @c-white;
+}
+
+.boxInner {
+    .subTitle {
+        a {
+            color: @c-con;
+
+            &.active {
+                color: @c-white;
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,49 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.table {
+    thead {
+        tr {
+            background-color: @c-white;
+            color: #bfbfbf;
+        }
+
+    }
+
+    tbody {
+        tr {
+            background-color: @c-white;
+
+            &:hover {
+                background-color: @c-con-bg-h;
+
+                th,
+                td {
+                    color: @c-black;
+                }
+
+            }
+
+            &.odd {
+                background-color: #f5f5f5;
+            }
+
+            td {
+                color: @c-con;
+            }
+
+        }
+
+        .btnWrapper {
+            color: @c-con;
+            border: 0.05rem solid @c-border;
+            background-color: @c-border;
+        }
+
+    }
+
+}
+
+.pageShow {
+    display: block;
+}

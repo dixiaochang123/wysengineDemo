@@ -1,0 +1,24 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.darkStyle(@borderScale) {
+    .box,
+    .boxActive {
+        border: 0.05rem * @borderScale solid #465076;
+        color: @c-con;
+    }
+
+    .boxActive {
+        border: 0.05rem * @borderScale solid #408ef0;
+        background-color: #408ef0;
+        color: @c-white;
+    }
+
+}
+
+.darkStyle(1);
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .darkStyle(2);
+}

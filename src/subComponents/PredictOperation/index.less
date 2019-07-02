@@ -1,0 +1,76 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .panelEdit {
+        float: right;
+        display: block;
+        width: 0.9rem * @scale;
+        height: 0.9rem * @scale;
+        margin-top: 0.8rem * @scale;
+        margin-right: 1rem * @scale;
+        background: url(../../images/common/modify.png) no-repeat 50% 50%;
+        background-size: 100% auto;
+        cursor: pointer;
+    }
+
+    .panelApprove {
+        float: right;
+        display: block;
+        width: 0.9rem * @scale;
+        height: 0.9rem * @scale;
+        margin-top: 0.8rem * @scale;
+        margin-right: 1rem * @scale;
+        background: url(../../images/common/ty.png) no-repeat 50% 50%;
+        background-size: 100% auto;
+        cursor: pointer;
+
+        &.active {
+            background: url(../../images/common/tyl.png) no-repeat 50% 50%;
+        }
+
+    }
+
+    .dropdownWrapper {
+        display: inline-block;
+
+        > div {
+            width: 11rem * @scale;
+            text-align: left;
+        }
+
+    }
+
+    .dropdown {
+        width: 11rem * @scale;
+    }
+
+    .dateboxWrapper {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.5rem * @scale;
+    }
+
+    .dateboxDom {
+        display: flex;
+        justify-content: space-between;
+        width: 11rem * @scale;
+    }
+
+    .worker {
+        margin-bottom: 0.3rem * @scale;
+    }
+
+}
+
+.baseStyle(1);
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .dropdownWrapper {
+        > div {
+            width: 16rem;
+        }
+
+    }
+
+}

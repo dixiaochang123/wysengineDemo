@@ -1,0 +1,32 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.lightStyle() {
+    .title {
+        color: @c-white;
+    }
+
+    .subTitle,
+    .infoItemVal {
+        color: @c-con;
+    }
+
+    .infoItem {
+        color: @c-sub-title;
+
+        &:first-child {
+            .infoItemVal {
+                border-left: none;
+            }
+
+        }
+
+        .infoItemVal {
+            border-left: 0.05rem solid #898989;
+        }
+
+    }
+
+}
+
+.lightStyle();

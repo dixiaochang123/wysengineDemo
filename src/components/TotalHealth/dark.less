@@ -1,0 +1,51 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.box {
+    color: @c-white;
+}
+
+.subTitle {
+    a {
+        &:first-of-type {
+            background-color: #1f253e;
+            color: @c-white;
+        }
+
+        &:last-of-type {
+            background-color: #1a2037;
+            color: #727d9d;
+        }
+
+    }
+
+}
+
+.parentLeftSpan {
+    margin-bottom: 1rem;
+    height: 340px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+}
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .subTitle {
+        a {
+            &:last-of-type {
+                padding-left: 0.5rem;
+            }
+
+        }
+
+    }
+
+}

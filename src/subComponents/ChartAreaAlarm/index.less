@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .turbineTypes {
+        position: absolute;
+        top: 3rem * @scale;
+        right: 1rem * @scale;
+    }
+
+    .turbineType {
+        margin-left: 0.5rem * @scale;
+    }
+
+    .turbineTypeBtn {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0.4rem * @scale;
+        height: 0.4rem * @scale;
+        margin-right: 0.2rem * @scale;
+        border-radius: 0.2rem * @scale;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .turbineTypeName {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: @f-t * @scale;
+        cursor: pointer;
+    }
+
+}
+
+.baseStyle(1);
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(@big);
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .turbineTypeBtn {
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 0.3rem;
+    }
+
+    .turbineTypeName {
+        font-size: 1rem;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(@msbig);
+
+    .turbineTypes {
+        top: 4.5rem;
+    }
+
+}

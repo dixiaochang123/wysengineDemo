@@ -1,0 +1,159 @@
+@import '../../styles/variables';
+
+.box {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+}
+
+.firstRow {
+    position: relative;
+    width: 100%;
+    height: 16rem;
+    margin-bottom: 1.4rem;
+    padding-top: 1rem;
+}
+
+.tab {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.tabActive {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.tab,
+.tabActive {
+    height: 1.9rem;
+    line-height: 1.9rem;
+    padding: 0 2rem 0 1.5rem;
+    font-size: @f-s;
+    cursor: pointer;
+}
+
+.firstRowCharts {
+    width: 100%;
+    height: 100%;
+}
+
+.firstRowChartInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.titleWithSwitch {
+    z-index: 100 !important;
+    padding-top: 1.3rem !important;
+}
+
+.titleIcon {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2rem;
+    height: 3.25rem;
+    cursor: pointer;
+}
+
+.titleText {
+    margin-top: -3.5rem;
+}
+
+.filterWrapper {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    z-index: 100;
+    width: 49%;
+    height: 16rem;
+    border-radius: 0.25rem;
+}
+
+.row {
+    position: relative;
+    width: 100%;
+    height: 11rem;
+    margin-bottom: 1.4rem;
+
+    &.thirdRow {
+        margin-bottom: 0;
+    }
+
+}
+
+.secondCharts,
+.tendency {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.secondChartInner {
+    width: 100%;
+    height: 100%;
+}
+
+.mc {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .filterWrapper {
+        top: 1rem;
+    }
+
+    .filterWrapper.down:before {
+        left: 38%;
+    }
+
+    .firstRow,
+    .row {
+        position: relative;
+        width: 100%;
+        height: 14rem !important;
+        margin-bottom: 1.4rem;
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .firstRow,
+    .row {
+        position: relative;
+        width: 100%;
+        height: 14rem !important;
+        margin-bottom: 1.4rem;
+    }
+
+    .tab,
+    .tabActive {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .tab,
+    .tabActive {
+        font-size: 1.4rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    .filterWrapper {
+        height: 20rem;
+    }
+
+}

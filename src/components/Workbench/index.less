@@ -1,0 +1,288 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1rem * @scale;
+    }
+
+    .charts {
+        width: 100%;
+        height: 10rem * @scale;
+        margin-bottom: 1rem * @scale;
+
+        > div {
+            height: 100%;
+        }
+
+    }
+
+    .chartRightBorder {
+        position: relative;
+        height: 100%;
+        border: 0.05rem * @scale solid #3f8eef !important;
+    }
+
+    .chartLeft {
+        width: 100%;
+        height: 100%;
+    }
+
+    .chartRight {
+        position: relative;
+        height: 100%;
+    }
+
+    .table {
+        position: relative;
+        width: 100%;
+        height: 30.5rem * @scale;
+        padding-top: 4rem;
+
+        table {
+            margin-bottom: 0.2rem * @scale;
+        }
+
+    }
+
+    .filterWrapper {
+        position: absolute;
+        top: 2.5rem * @scale;
+        left: 0;
+        z-index: 10;
+    }
+
+    .btns {
+        text-align: right;
+    }
+
+    .tabs {
+        position: absolute;
+        top: 3rem;
+        left: 1.4rem;
+
+        .tab {
+            margin-right: 1rem * @scale;
+            padding-bottom: 0.2rem * @scale;
+            font-size: 0.6rem * @scale;
+            cursor: pointer;
+
+            &.active {
+                border-bottom: 0.1rem solid @c-blue-primary;
+            }
+
+        }
+
+    }
+
+    .viewSwitch {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 0.75rem * @scale;
+        margin-right: 1.8rem * @scale;
+        border-radius: 0.1rem * @scale;
+
+        span {
+            display: block;
+            float: left;
+            cursor: pointer;
+            width: auto;
+            height: 1rem * @scale;
+            line-height: 1rem * @scale;
+            padding-left: 0.4rem * @scale;
+            padding-right: 0.4rem * @scale;
+            font-size: 0.7rem * @scale;
+
+            &.active {
+                background-color: @c-blue-primary;
+                color: @c-white;
+            }
+
+        }
+
+    }
+
+    .yjtableTitle {
+        width: 5rem * @scale;
+        text-align: left;
+
+        &.titleNoFilter {
+            background: none;
+        }
+
+    }
+
+    .addIcon {
+        margin-right: 1rem * @scale;
+    }
+
+    .addIcon,
+    .exportIcon {
+        display: inline-block;
+        width: 1rem * @scale;
+        height: 100%;
+    }
+
+    .btnWrapper {
+        display: inline-block;
+        height: 100%;
+    }
+
+    .dropdownWrapper {
+        display: inline-block;
+
+        > div {
+            width: 11rem * @scale;
+            text-align: left;
+        }
+
+    }
+
+    .dropdown {
+        width: 11rem * @scale;
+    }
+
+    .dateboxWrapper {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.5rem * @scale;
+    }
+
+    .dateboxDom {
+        display: flex;
+        justify-content: space-between;
+        width: 11rem * @scale;
+    }
+
+    .worker {
+        margin-bottom: 0.3rem * @scale;
+    }
+
+}
+
+.baseStyle(1);
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .baseStyle(1.25);
+
+    .viewSwitch {
+        margin-top: 0.6rem;
+    }
+
+    textarea {
+        width: 35rem;
+    }
+
+}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+    .baseStyle(1.15);
+
+    .viewSwitch {
+        margin-top: 0.6rem;
+    }
+
+    textarea {
+        width: 29.6rem;
+    }
+
+}
+
+/* mediumscreen style: 1600 * 900 */
+body[mediumscreen='true'] {
+    .baseStyle(1.15);
+
+    .viewSwitch {
+        margin-top: 0.6rem;
+    }
+
+    textarea {
+        width: 29.8rem;
+    }
+
+}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {
+    .baseStyle(1.17);
+
+    .viewSwitch {
+        margin-top: 0.6rem;
+    }
+
+    textarea {
+        width: 29.8rem;
+    }
+
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .baseStyle(1.18);
+
+    .viewSwitch {
+        margin-top: 0.6rem;
+    }
+
+    textarea {
+        width: 29.8rem;
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(1.2);
+
+    .table {
+        height: 38rem;
+    }
+
+    .table table tr {
+        height: 2.5rem;
+    }
+
+    .viewSwitch {
+        margin-top: 0.6rem;
+    }
+
+    textarea {
+        width: 30.2rem;
+    }
+
+    .addIcon,
+    .exportIcon {
+        background-size: 1rem;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(1.2);
+
+    textarea {
+        width: 43rem !important;
+    }
+
+    .dropdownWrapper {
+        > div {
+            width: 16rem;
+        }
+
+    }
+
+    .addIcon,
+    .exportIcon {
+        width: 1.6rem;
+        background-size: 1.6rem auto;
+    }
+
+    .table {
+        padding-top: 4.5rem;
+    }
+
+}

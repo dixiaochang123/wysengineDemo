@@ -1,0 +1,379 @@
+.modalForm {
+    width: 60rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+.modalFormErr {
+    width: 15rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0 auto 1rem;
+    color: #b65849;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.modalFormPanel {
+    display: inline-block;
+    vertical-align: top;
+    width: 15rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.modalFormItem,
+.modalFormItemStatic,
+.modalFormItemLarge,
+.modalFormItemBlock,
+.modalFormItemPersoninfo {
+    position: relative;
+    width: 15rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0 auto 1rem;
+    padding-left: 4rem;
+    text-align: left;
+}
+
+.modalFormItemStatic {
+    margin-bottom: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.modalFormItemLarge,
+.modalFormItemBlock {
+    width: 31.9rem;
+    height: auto;
+}
+
+.modalFormItemBlock {
+    padding-left: 0;
+}
+
+.modalFormItemPersoninfo {
+    padding-left: 6rem;
+}
+
+.modalFormItemBlock .modalFormTextArea {
+    width: 31.9rem;
+}
+
+.modalFormRadioWrapper {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.modalFormRadio {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.25rem;
+    border-radius: 50%;
+    border: 0.05rem solid #0075c2;
+    cursor: pointer;
+}
+
+.modalFormRadio.active {
+    background-color: #0075c2;
+}
+
+.modalFormRadioText,
+.modalFormStar {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.modalFormText {
+    color: #707070;
+    font-size: 0.7rem;
+}
+
+.modalFormStar:before {
+    display: block;
+    content: '*';
+    position: absolute;
+    top: 0.05rem;
+    left: -0.5rem;
+    color: #0075c2;
+    font-size: 0.6rem;
+}
+
+.modalFormLabel,
+.modalFormLabelLarge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #333;
+    font-size: 0.7rem;
+}
+
+.modalFormLabelLarge {
+    width: 6rem;
+}
+
+.modalFormInput {
+    width: 11rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0.1rem 0.25rem;
+    border: 0.05rem solid #e5e5e5;
+    background-color: #f7f7f7;
+    color: #707070;
+    font-size: 0.7rem;
+}
+
+.modalFormTextArea {
+    display: block;
+    width: 28rem;
+    height: 3rem;
+    line-height: 1;
+    padding: 0.25rem;
+    border: 0.05rem solid #e5e5e5;
+    background-color: #f7f7f7;
+    color: #707070;
+    font-size: 0.7rem;
+    resize: none;
+}
+
+.modalFormBtns {
+    position: relative;
+    width: 31.9rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0 auto 2rem;
+}
+
+.modalFormConfirmBtn,
+.modalFormCancelBtn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 8rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    margin: 0.5rem 1rem;
+    border-radius: 0.05rem;
+    background-size: 0.6rem;
+    font-size: @f-t;
+    text-align: center;
+    text-indent: 2em;
+    cursor: pointer;
+}
+
+.modalFormConfirmBtn {
+    background: url(../../images/common/confirm.png) no-repeat 40% center;
+    background-color: #3f8eef;
+    color: #fff;
+}
+
+.modalFormCancelBtn {
+    background: url(../../images/common/cancel.png) no-repeat 40% center;
+    background-color: #272f4e;
+    border: 0.05rem solid #121626;
+    color: #b2b4bd;
+}
+
+.modalFormConfirmBtn:hover,
+.modalFormCancelBtn:hover {
+    background-color: #3f8eef;
+    color: #fff;
+}
+
+/* dark theme */
+body[theme='dark'] .modalFormRadioText {
+    color: #a4a6b1;
+}
+
+body[theme='dark'] .modalForm {
+    background-color: #21283a;
+}
+
+body[theme='dark'] .modalFormErr {
+    color: #b65849;
+}
+
+body[theme='dark'] .modalFormRadio {
+    border: 0.05rem solid #121626;
+}
+
+body[theme='dark'] .modalFormRadio.active {
+    background-color: #00deff;
+}
+
+body[theme='dark'] .modalFormText,
+body[theme='dark'] .modalFormStar:before,
+body[theme='dark'] .modalFormLabel,
+body[theme='dark'] .modalFormLabelLarge {
+    color: #a4a6b1;
+}
+
+body[theme='dark'] .modalFormTextArea,
+body[theme='dark'] .modalFormInput,
+body[theme='dark'] .modalFormInput.disabled {
+    border: 0.05rem solid #121626;
+    background-color: transparent;
+    color: #b2b4bd;
+}
+
+body[theme='dark'] .modalFormTextArea {
+    font-size: 0.6rem;
+    color: #59627f;
+}
+
+body[theme='dark'] .modalFormInput {
+    border: 0.05rem solid #121626;
+}
+
+/* miniscreen style */
+body[miniscreen='true'] .modalFormInput,
+body[miniscreen='true'] .modalFormInput.disabled {
+    width: 14rem;
+}
+
+body[miniscreen='true'] .modalFormPanel {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* miniscreen style */
+body[miniscreen='true']  .modalFormLabel {
+    width: 5rem;
+}
+
+body[miniscreen='true']  .modalFormBtns {
+    width: 36rem;
+    padding-left: 5rem;
+}
+
+body[miniscreen='true']  .modalFormItemLarge {
+    width: 36rem;
+}
+
+body[miniscreen='true'] .modalFormItem,
+body[miniscreen='true'] .modalFormItemLarge,
+body[miniscreen='true'] .modalFormItemStatic {
+    padding-left: 5rem;
+}
+
+body[miniscreen='true'] .modalFormConfirmBtn,
+body[miniscreen='true'] .modalFormCancelBtn {
+    background-position-x: 35%;
+    background-size: 0.8rem;
+}
+
+/* bigscreen style */
+body[bigscreen='true'],
+body[bigscreen='true'] .modalFormStar:before {
+    font-size: 0.8rem;
+}
+
+body[bigscreen='true'] .modalFormErr,
+body[bigscreen='true'] .modalFormText,
+body[bigscreen='true'] .modalFormLabel,
+body[bigscreen='true'] .modalFormLabelLarge,
+body[bigscreen='true'] .modalFormInput,
+body[bigscreen='true'] .modalFormInput,
+body[bigscreen='true'] .modalFormTextArea {
+    font-size: 0.9rem;
+}
+
+body[bigscreen='true'] .modalFormTextArea {
+    min-height: 3rem;
+    overflow: hidden;
+}
+
+body[bigscreen='true'] .modalFormTextLarge {
+    display: block;
+    width: 15rem;
+}
+
+body[bigscreen='true'] .modalFormItem,
+body[bigscreen='true'] .modalFormItemLarge,
+body[bigscreen='true'] .modalFormItemStatic {
+    padding-left: 5rem;
+}
+
+body[bigscreen='true'] .modalFormLabel {
+    width: 5rem;
+}
+
+/* microsoft bigscreen style */
+body[bigscreenmicrosoft='true'] .modalForm {
+    width: 80rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormPanel,
+body[bigscreenmicrosoft='true'] .modalFormItemStatic {
+    width: 25rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormItem,
+body[bigscreenmicrosoft='true'] .modalFormItemStatic,
+body[bigscreenmicrosoft='true'] .modalFormItemLarge,
+body[bigscreenmicrosoft='true'] .modalFormItemPersoninfo {
+    margin: 0 auto 2.5rem;
+    padding-left: 7rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormItemLarge,
+body[bigscreenmicrosoft='true'] .modalFormItemBlock {
+    width: 41.9rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormRadio {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormText {
+    font-size: 1.4rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormLabel,
+body[bigscreenmicrosoft='true'] .modalFormLabelLarge {
+    width: 7rem;
+    font-size: 1.4rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormInput {
+    width: 13.4rem;
+    height: 2.5rem;
+    font-size: 1.4rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormTextArea {
+    width: 45rem;
+    min-height: 4rem;
+    font-size: 1.3rem;
+    overflow: hidden;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormBtns {
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormRadioText {
+    font-size: 1.4rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormConfirmBtn,
+body[bigscreenmicrosoft='true'] .modalFormCancelBtn {
+    width: 9rem;
+    height: 2rem;
+    line-height: 2rem;
+    background-size: 1rem;
+    font-size: 1.2rem;
+}
+
+body[bigscreenmicrosoft='true'] .modalFormItem {
+    width: 20rem;
+}

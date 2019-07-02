@@ -1,0 +1,64 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.button {
+    border: 0.05rem solid @c-border;
+    background-color: @c-border;
+    color: #a0a0a0;
+}
+
+.menusWrapper {
+    border: 0.05rem solid @c-border;
+    background-color: @c-white;
+    box-shadow: @bs;
+}
+
+.menus {
+    width: 18rem !important;
+    background-color: @c-white;
+
+    li {
+        background-color: @c-white;
+        color: @c-con;
+
+        &.menuItemChecked,
+        &:hover {
+            background-color: #fafafa;
+
+            .menuCheckbox {
+                border: 0.05rem solid @c-blue-primary;
+                background-color: @c-blue-primary;
+            }
+
+        }
+
+        &.menuItemActive {
+            background-color: #fafafa;
+            span {
+                position: relative;
+            }
+            span:last-of-type::after {
+                content:'';
+                background:url(../../images/common/gll.png) no-repeat;
+                background-size:1rem;
+                width: 1rem;
+                height: 1rem;
+                vertical-align:middle;
+                display:inline-block;
+                position:absolute;
+                left: 105%;
+                top: 35%;
+            }
+        }
+
+    }
+
+    .menuCheckbox {
+        border: 0.05rem solid @c-con;
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+}

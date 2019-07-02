@@ -1,0 +1,103 @@
+.hideOverflow {
+    overflow: hidden;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.none {
+    display: none !important;
+    width: 0 !important;
+}
+
+.hidden,
+.invisible {
+    visibility: hidden;
+}
+
+.transparent {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.tc {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.boxInner {
+    padding: 2rem 1rem 1rem;
+}
+
+.gapRight {
+    padding-right: 1%;
+}
+
+.gapLeft {
+    padding-left: 1%;
+}
+
+.arrowDown {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    border-top: 0.4rem solid #535353;
+    border-bottom: 0.4rem solid transparent;
+    border-left: 0.4rem solid transparent;
+    border-right: 0.4rem solid transparent;
+    cursor: pointer;
+}
+
+/* dark theme style */
+body[theme='dark'] .arrowDown {
+    border-top: 0.4rem solid #fff;
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] .boxInner {
+    padding: 4rem 1%;
+}
+
+body[bigscreenmicrosoft='true'] .arrowDown {
+    border-top: 0.7rem solid #535353;
+    border-bottom: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+}

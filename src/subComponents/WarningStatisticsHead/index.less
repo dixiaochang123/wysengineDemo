@@ -1,0 +1,134 @@
+@import '../../styles/variables';
+
+.boxInnerHead1 {
+	width:100%;
+	padding: 0 0 0 1.6rem;
+    height: 7.3rem;
+    overflow: hidden;
+    border-radius: 0.25rem;
+}
+
+.boxInnerHeadChild1,.boxInnerHeadChild2 {
+	display: flex;
+	span {
+		width: 100%;
+	}
+}
+
+.boxInnerHeadChild1 {
+	height: 2.3rem;
+	span {
+		font-size: 0.7rem;
+		line-height: 3.5rem;
+	}
+}
+.boxInnerHeadChild2 {
+	height: 5rem;
+	padding-top: 1rem;
+	span {
+		height: 2.5rem;
+		text-align: center;
+		padding-left: 5%;
+		line-height: 2.5rem;
+		font-size: 1.2rem;
+		position: relative;
+		border-left: solid 1px #898989;
+	}
+	.span1::before{
+		content:'';
+		background: url(images/warninginfordetails/wt4.png) no-repeat;
+		background-size:2.5rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		vertical-align:middle;
+		display:inline-block;
+		position:absolute;
+		left: 38%;
+	    top: 0;
+	}
+	.span2::before{
+		content:'';
+		background: url(images/warninginfordetails/wt3.png);
+		background-size:2.5rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		vertical-align:middle;
+		display:inline-block;
+		position:absolute;
+		left: 38%;
+    	top: 0;
+	}
+	.span3::before{
+		content:'';
+		background: url(images/warninginfordetails/wt2.png);
+		background-size:2.5rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		vertical-align:middle;
+		display:inline-block;
+		position:absolute;
+		left: 38%;
+    	top: 0;
+	}
+	.span4::before{
+		content:'';
+		background: url(images/warninginfordetails/wt1.png);
+		background-size:2.5rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		vertical-align:middle;
+		display:inline-block;
+		position:absolute;
+		left: 38%;
+    	top: 0;
+	}
+
+}
+
+/* miniscreen style */
+body[miniscreen='true'] {
+
+}
+
+/* bigscreen style */
+body[bigscreen='true'] {
+	.boxInnerHeadChild1 {
+		span {
+			font-size: 0.9rem;
+		}
+	}
+	.boxInnerHeadChild2 {
+		span {
+			font-size: 1.4rem;
+		}
+		.span1::before,.span2::before,.span3::before,.span4::before {
+			background-size:3rem;
+			width: 3rem;
+			height: 3rem;
+			left: 45%;
+		}
+	}
+}
+
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+	.boxInnerHeadChild1 {
+		span {
+			font-size: 1.4rem;
+		}
+	}
+	
+	.boxInnerHeadChild2 {
+		span {
+			font-size: 1.9rem;
+		}
+		.span1::before,.span2::before,.span3::before,.span4::before {
+			background-size:4rem;
+			width: 4rem;
+			height: 4rem;
+			top: -20%;
+			left: 45%;
+		}
+	}
+}

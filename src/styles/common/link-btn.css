@@ -1,0 +1,69 @@
+.linkBtn,
+.closeBtn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 0.6rem;
+    border-radius: 0.1rem;
+    border: 0.05rem solid #eee;
+    background-color: #fbfbfb;
+    cursor: pointer;
+}
+
+.linkBtn:hover,
+.closeBtn:hover {
+    background-color: #f5f6f8;
+}
+
+.linkBtn:after,
+.closeBtn:after {
+    display: block;
+    content: '»';
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #bfbfbf;
+    font-size: 1.5rem;
+}
+
+.closeBtn:after {
+    content: '×';
+    text-align: center;
+    color: #717c9c;
+}
+
+body[theme='dark'] .linkBtn,
+body[theme='dark'] .closeBtn {
+    border: 0.05rem solid #121626;
+    background-color: #313855;
+}
+
+body[theme='dark'] .linkBtn:hover,
+body[theme='dark'] .closeBtn:hover {
+    background-color: #3c4874;
+    box-shadow: 0 0 0.2rem #495686 inset;
+}
+
+body[theme='dark'] .linkBtn:after,
+body[theme='dark'] .closeBtn:hover {
+    color: #717c9c;
+}
+
+/* microsoft bigscreen style */
+body[bigscreen='true'] .closeBtn {
+    height: 1.2rem;
+}
+
+/* microsoft bigscreen style */
+body[bigscreenmicrosoft='true'] .linkBtn {
+    width: 5rem;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+body[bigscreenmicrosoft='true'] .linkBtn:after,
+body[bigscreenmicrosoft='true'] .closeBtn:after {
+    margin-top: -0.25rem;
+    font-size: 2.5rem;
+}

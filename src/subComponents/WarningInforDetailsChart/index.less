@@ -1,0 +1,388 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        position: relative;
+        width: 100%;
+    }
+
+    .btn {
+        position: absolute;
+        top: 1rem * @scale;
+        right: 1rem * @scale;
+        z-index: 100;
+        cursor: pointer;
+        width: 1rem * @scale;
+        height: 1.2rem * @scale;
+    }
+
+    .tabs {
+        position: absolute;
+        top: 0.7rem * @scale;
+        right: 2.5rem * @scale;
+        z-index: 100;
+        border-radius: 0.25rem * @scale;
+        overflow: hidden;
+        cursor: pointer;
+
+        .tab {
+            display: inline-block;
+            width: 2.3rem * @scale;
+            height: 1.4rem * @scale;
+            line-height: 1.4rem * @scale;
+            font-size: 0.7rem * @scale;
+            text-align: center;
+        }
+
+    }
+
+    .boxInnerFoot {
+        width: 100%;
+        height: 36rem;
+
+        &.showMore {
+            height: 17rem;
+        }
+
+    }
+
+    .selectDropdown,
+    .varPanel > span {
+        display: inline-block;
+        vertical-align: top;
+        height: 1.5rem * @scale;
+    }
+
+    .varPanel > span {
+        line-height: 1.5rem * @scale;
+    }
+
+    .selectDropdown,
+    .selectDropdown div {
+        width: 15rem * @scale;
+    }
+
+    .overlayCls {
+        width: 15rem * @scale;
+        padding: 0;
+
+        ul {
+            width: 100%;
+        }
+
+    }
+
+    .varPanels,
+    .varPanelsShow {
+        position: absolute;
+        top: 0;
+        left: -26%;
+        z-index: 1;
+        width: 25%;
+        height: calc(~'100% + 2.5rem');
+        height: -moz-calc(~'100% + 2.5rem');
+        height: -webkit-calc(~'100% + 2.5rem');
+        margin-top: -2.5rem * @scale;
+        padding-top: 3.5rem;
+        padding-left: 1.25rem * @scale;
+        border-radius: 0.25rem * @scale;
+        transition: left 1s;
+
+        &.varPanelsBig {
+            height: calc(~'200% + 4.4rem');
+            height: -moz-calc(~'200% + 4.4rem');
+            height: -webkit-calc(~'200% + 4.4rem');
+        }
+
+    }
+
+    .varPanelsShow {
+        left: -1%;
+        transition: left 1s;
+    }
+
+    .varPanel {
+        margin-bottom: 1rem * @scale;
+    }
+
+    .varPanel > span {
+        color: @c-white;
+        font-size: @f-t * @scale;
+    }
+
+    .varPanel .varPanelContent {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .varPanelLabel,
+    .varPanelLabelActive {
+        display: block;
+        width: 4.6rem * @scale;
+        height: 1.4rem * @scale;
+        line-height: 1.4rem * @scale;
+        margin-right: 1.5rem * @scale;
+        border-radius: 0.1rem * @scale;
+        text-align: center;
+        font-size: @f-s * @scale;
+        cursor: pointer;
+    }
+
+    .selectedVar,
+    .selectedVarOnly {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: 1.4rem * @scale;
+        line-height: 1.4rem * @scale;
+        margin: 0.4rem * @scale;
+        padding: 0 0.5rem * @scale;
+        padding-right: 1rem * @scale;
+        border-radius: 0.1rem * @scale;
+        cursor: pointer;
+    }
+
+    .selectedVarClose {
+        position: absolute;
+        top: -0.3rem * @scale;
+        right: 0.1rem * @scale;
+        width: 0.5rem * @scale;
+        height: 0.5rem * @scale;
+        font-size: @f-t * @scale;
+        cursor: pointer;
+    }
+
+    .clear {
+        display: inline-block;
+        vertical-align: middle;
+        width: 10rem * @scale;
+        margin: 0.4rem * @scale;
+        padding: 0.5rem * @scale;
+        color: @c-white;
+        font-size: @f-t * @scale;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .switchTitle,
+    .switchTitleOpen {
+        position: absolute;
+        top: 50%;
+        right: -1.5rem * @scale;
+        z-index: 100;
+        width: 1.5rem * @scale;
+        height: 6rem * @scale;
+        line-height: 1.6rem * @scale;
+        margin-top: -3.5rem * @scale;
+        padding-top: 0.5rem * @scale;
+        border-radius: 0.25rem * @scale;
+        font-size: @f-t * @scale;
+        letter-spacing: 0.1rem * @scale;
+        writing-mode: vertical-rl;
+        writing-mode: tb-rl;
+        -ms-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        cursor: pointer;
+    }
+
+    .switchTitle:after,
+    .switchTitleOpen:after {
+        position: absolute;
+        bottom: 1rem * @scale;
+        left: 50%;
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        margin-left: -0.2rem * @scale;
+    }
+
+    .switchTitleOpen:after {
+        margin-left: -0.6rem * @scale;
+    }
+
+    .switchTitle:after {
+        border-top: 0.4rem * @scale solid transparent;
+        border-bottom: 0.4rem * @scale solid transparent;
+        border-right: 0.4rem * @scale solid transparent;
+    }
+
+    .switchTitleOpen:after {
+        border-top: 0.4rem * @scale solid transparent;
+        border-bottom: 0.4rem * @scale solid transparent;
+        border-left: 0.4rem * @scale solid transparent;
+    }
+
+    .searchBtn {
+        width: 8.4rem * @scale;
+        height: 1.7rem * @scale;
+        line-height: 1.7rem * @scale;
+        margin: 3rem * @scale auto 0;
+        border-radius: 0.1rem * @scale;
+        background-color: @c-blue-primary;
+        color: @c-white;
+        font-size: @f-s * @scale;
+        text-align: center;
+        cursor: pointer;
+        background: url(../../images/common/ss.png) no-repeat 40% center;
+        background-color: @c-blue-primary;
+        text-indent: 2em;
+
+        &:hover {
+            background-color: #78b4fe;
+        }
+
+    }
+
+}
+
+.baseStyle(1);
+
+/* miniscreen style */
+body[miniscreen='true'] {
+    .btn {
+        height: 1.2rem;
+    }
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(1.2);
+
+    .varPanels,
+    .varPanelsShow {
+        top: 0.5rem;
+        height: 38.5rem;
+    }
+
+    .varPanel > span {
+        font-size: 1rem;
+    }
+
+    .switchTitle,
+    .switchTitleOpen {
+        right: -1.5rem * 1.5;
+        width: 1.5rem * 1.5;
+        height: 7rem * 1.5;
+        line-height: 1.6rem * 1.5;
+        margin-top: -3.5rem * 1.5;
+        padding-top: 0.5rem * 1.5;
+        border-radius: 0.25rem * 1.5;
+        font-size: @f-t * 1.5;
+        letter-spacing: 0.1rem * 1.5;
+    }
+
+    .switchTitle:after,
+    .switchTitleOpen:after {
+        bottom: 1rem * 1.5;
+        margin-left: -0.2rem * 1.5;
+    }
+
+    .switchTitleOpen:after {
+        margin-left: -0.6rem * 1.5;
+    }
+
+    .btn {
+        width: 1rem !important;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(1.2);
+
+    .tabs {
+        top: 1rem;
+        right: 3.5rem;
+        border-radius: 0.5rem;
+
+        .tab {
+            width: 3.3rem;
+            height: 2rem;
+            line-height: 2rem;
+            font-size: 0.9rem;
+        }
+
+    }
+
+    .selectDropdown {
+        height: auto;
+    }
+
+    .varPanels,
+    .varPanelsShow {
+        top: 0.5rem;
+        height: 48.5rem;
+    }
+
+    .varPanels {
+        left: -26%;
+    }
+
+    .varPanel > span {
+        height: 2.8rem;
+        line-height: 2.8rem;
+        font-size: @f-t * 2;
+    }
+
+    .varPanelLabel,
+    .varPanelLabelActive {
+        width: 4.6rem * 2;
+        height: 1.4rem * 2;
+        line-height: 1.4rem * 2;
+        margin-right: 1.5rem * 2;
+        border-radius: 0.1rem * 2;
+        font-size: @f-s * 2;
+    }
+
+    .switchTitle,
+    .switchTitleOpen {
+        right: -1.5rem * 2;
+        width: 1.5rem * 2;
+        height: 7rem * 2;
+        line-height: 1.6rem * 2;
+        margin-top: -3.5rem * 2;
+        padding-top: 0.5rem * 2;
+        border-radius: 0.25rem * 2;
+        font-size: @f-t * 2;
+        letter-spacing: 0.1rem * 2;
+    }
+
+    .switchTitle:after,
+    .switchTitleOpen:after {
+        bottom: 1rem * 2;
+        margin-left: -0.2rem;
+    }
+
+    .switchTitleOpen:after {
+        margin-left: -0.8rem;
+    }
+
+    .btn {
+        width: 1.5rem;
+    }
+
+    .searchBtn {
+        background-size: 1rem;
+        font-size: 1.2rem;
+
+        .clear,
+        .selectedVar,
+        .selectedVarOnly {
+            font-size: 1.2rem;
+        }
+
+        .selectedVar {
+            height: 2.5rem;
+            line-height: 2.5rem;
+        }
+
+        .selectedVarClose {
+            right: 0.3rem;
+            font-size: 1.2rem;
+        }
+
+    }
+
+}

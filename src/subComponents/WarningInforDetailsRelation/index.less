@@ -1,0 +1,96 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale, @borderScale) {
+    .box {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1rem * @scale;
+    }
+
+    .tabs {
+        width: 100%;
+        padding: 0.5rem * @scale 1.4rem * @scale;
+        font-size: @f-t * @scale;
+    }
+
+    .tabs span {
+        margin-right: 1rem * @scale;
+        padding-bottom: 0.25rem * @scale;
+        cursor: pointer;
+
+        &:hover,
+        &.tabActive {
+            border-bottom: 0.05rem * @borderScale solid @c-blue-primary;
+        }
+
+    }
+
+}
+
+.baseStyle(1, 1);
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .box table tr {
+        height: 2rem !important;
+    }
+
+}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+    .box table tr {
+        height: 2rem !important;
+    }
+
+}
+
+/* mediumscreen style: 1600 * 900 */
+body[mediumscreen='true'] {
+    table tr {
+        height: 2rem !important;
+    }
+
+}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {
+    table tr {
+        height: 2rem !important;
+    }
+
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    table tr {
+        height: 2rem !important;
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .tabs {
+        font-size: @f-l;
+    }
+
+    table + div {
+        margin-top: 1rem;
+    }
+
+    table tr {
+        height: 1.9rem !important;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(@msbig, 2);
+
+    table tr {
+        height: 2.45rem !important;
+    }
+
+}

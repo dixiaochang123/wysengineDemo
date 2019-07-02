@@ -1,0 +1,63 @@
+/* base style */
+.oddOverlay,
+.evenOverlay {
+    width: 18.5rem;
+    border-radius: 0.25rem;
+    background-color: #354255;
+    color: #ffffff;
+}
+
+.oddOverlay .rc-tooltip-inner,
+.evenOverlay .rc-tooltip-inner {
+    /*background-color: #fff;*/
+}
+
+.oddOverlay .rc-tooltip-arrow-inner,
+.evenOverlay .rc-tooltip-arrow-inner {
+    /*border-top-color: #fff;*/
+}
+
+.rc-tooltip-hidden {
+    display: none;
+}
+
+.rc-tooltip-inner > span {
+    display: block;
+    padding: 1rem;
+}
+
+.rc-tooltip-overlay-inner {
+    letter-spacing:0.05rem;
+    line-height: 130%;
+}
+
+/* dark theme style */
+body[theme='dark'] .oddOverlay,
+body[theme='dark'] .evenOverlay {
+    width: 18.5rem;
+    background-color: #28406C;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+body[theme='dark'] .rc-tooltip-inner,
+body[theme='dark'] .rc-tooltip-arrow-inner {
+    color: #fff;
+}
+
+body[theme='dark'] .rc-tooltip-inner,
+body[theme='dark'] .oddOverlay .rc-tooltip-inner {
+    background-color: #28406C;
+}
+
+body[theme='dark'] .rc-tooltip-arrow-inner,
+body[theme='dark'] .oddOverlay .rc-tooltip-arrow-inner {
+    border-top-color: #21283a;
+}
+
+/* microsoft bigscreen style */
+body[bigscreenmicrosoft='true'] .oddOverlay,
+body[bigscreenmicrosoft='true'] .evenOverlay {
+    width: 20.8333%;
+    font-size: 1.4rem;
+}

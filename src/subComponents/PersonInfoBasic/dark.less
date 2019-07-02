@@ -1,0 +1,53 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.darkStyle(@borderScale) {
+    .info {
+        .label {
+            color: @c-sub-title;
+        }
+
+        .val {
+            background-color: @c-con-bg;
+            color: @c-con;
+        }
+
+    }
+
+    .btnWrapper {
+        color: @c-con;
+        border: 0.05rem * @borderScale solid #121626;
+        background-color: #272f4e;
+    }
+
+    .tabs {
+        .tab {
+            background-color: #222944;
+            color: @c-con;
+
+            &.active {
+                background-color: @c-blue-primary;
+                color: @c-white;
+            }
+
+        }
+
+    }
+
+}
+
+.box {
+    .darkStyle(1);
+}
+
+/* bigscreen style */
+body[bigscreen='true'] {
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .box {
+        .darkStyle(2);
+    }
+
+}

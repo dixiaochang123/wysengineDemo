@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        position: relative;
+        width: 25%;
+        height: 100%;
+        padding-right: 1rem * @scale;
+    }
+
+    .canvasWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    canvas {
+        cursor: default;
+    }
+
+    .trend {
+        position: absolute;
+        bottom: 1rem * @scale;
+        right: 1rem * @scale;
+        font-size: @f-s * @scale;
+
+        img,
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        img {
+            width: 1.1rem * @scale;
+            height: 1.1rem * @scale;
+            margin-right: 0.5rem * @scale;
+        }
+
+    }
+
+}
+
+.baseStyle(1);
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(@big);
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(@msbig);
+}

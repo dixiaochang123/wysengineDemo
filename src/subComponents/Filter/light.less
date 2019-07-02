@@ -1,0 +1,89 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.boxShow {
+    border: 0.05rem solid @c-border;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0.5rem 0.5rem #f1f1f1;
+}
+
+.selectedFilterLabelSpe {
+    color: @c-con !important;
+}
+
+.boxArrow {
+    border-bottom: 0.4rem solid @c-border;
+}
+
+.boxArrowAfter {
+    border-bottom: 0.4rem solid @c-white;
+}
+
+.filterLabel {
+    color: @c-con;
+}
+
+.btn.search {
+    background: url(../../images/common/ss.png) no-repeat 40% center;
+
+    &:hover {
+        background-color: #78b4fe;
+    }
+
+}
+
+.btn.rest {
+    color: #707070;
+    background: url(../../images/common/cz.png) no-repeat 40% center;
+    background-color: #f7f7f7;
+
+    &:hover {
+        background: url(../../images/common/cz2.png) no-repeat 40% center;
+        background-size: 0.6rem;
+        background-color: #78b4fe;
+        color: #ffffff;
+    }
+
+}
+
+.btn.search,
+.btn.rest {
+    text-indent: 2em;
+    background-size: 0.6rem;
+}
+
+.btn:hover,
+.btn:active,
+.filter.active,
+.btn.active {
+    background-color: #3f8eef;
+    border-radius: 0.1rem;
+    color: @c-white;
+}
+
+.btn,
+.filter,
+.filterInput {
+    background-color: #f7f7f7;
+    border: 0.05rem solid @c-border;
+    border-radius: 0.1rem;
+    color: @c-con;
+}
+
+/* miniscreen style */
+body[miniscreen='true'] {
+    .btn.search,
+    .btn.rest {
+        background-size: 1rem;
+
+        &:hover {
+            background-size: 1rem;
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+}

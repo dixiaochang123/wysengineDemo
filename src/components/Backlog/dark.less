@@ -1,0 +1,35 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+body,
+.box,
+.varWrapper {
+    background-color: @c-bg;
+}
+
+.varWrapper {
+    background-color: #1f253e;
+    box-shadow: @bs;
+}
+
+.borderDiv {
+    border-top: 0.05rem solid @c-blue-thi;
+}
+
+.header {
+	background-color: #1a2037;
+	> div {
+		&:first-of-type {
+			background-color: #1f253e;
+		}
+	}
+}
+
+.header1 {
+	background-color: #1f253e;
+	> div {
+		&:first-of-type {
+			background-color: #1a2037;
+		}
+	}
+}

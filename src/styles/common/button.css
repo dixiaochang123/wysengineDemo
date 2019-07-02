@@ -1,0 +1,114 @@
+/* btn */
+body .btn + .btn {
+    margin-left: 0.7rem;
+}
+
+body .btn {
+    display: inline-block;
+    width: auto;
+    height: 1rem;
+    line-height: 1rem;
+    padding: 0 0.7rem;
+    border-radius: 0.1rem;
+    border: 0.05rem solid #eee;
+    background-color: #fbfbfb;
+    color: #bfbfbf;
+    font-size: 0.7rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+body .btn:hover,
+body .btn:active,
+body .btn:-webkit-any-link:active {
+    border: 0.05rem solid #eee;
+    background-color: #fbfbfb;
+    color: #bfbfbf;
+}
+
+/* dark theme style */
+body[theme='dark'] .btn {
+    border: 0.05rem solid #121626;
+    background-color: #272f4e;
+    color: #3f8eef;
+}
+
+body[theme='dark'] .btn:hover,
+body[theme='dark'] .btn:active,
+body[theme='dark'] .btn:-webkit-any-link:active {
+    border: 0.05rem solid #121626;
+    background-color: #272f4e;
+    color: #3f8eef;
+}
+
+/* bigscreen style */
+body[bigscreen='true'] .btn {
+    font-size: 0.8rem;
+}
+
+/* microsoft bigscreen style */
+body[bigscreenmicrosoft='true'] .btn {
+    font-size: 1.4rem;
+}
+
+/* btnLoading */
+.btnLoading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btnLoading:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    pointer-events: all;
+}
+
+.btnLoading:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-top: -0.9rem;
+    margin-left: -0.9rem;
+    background: transparent url(../../images/common/loading-spinning-bubbles1.svg) no-repeat 50% 50%;
+    background-size: 1.7rem 1.75rem;
+}
+
+body[theme='dark'] .btnLoading:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    pointer-events: all;
+}
+
+body[theme='dark'] .btnLoading:after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-top: -0.9rem;
+    margin-left: -0.9rem;
+    background: transparent url(../../images/common/loading-spinning-bubbles.svg) no-repeat 50% 50%;
+    background-size: 1.7rem 1.75rem;
+}

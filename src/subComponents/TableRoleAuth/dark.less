@@ -1,0 +1,48 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.table {
+    box-shadow: 0 0.2rem 0.2rem #0c0d14;
+}
+
+.table thead {
+    background: url(../../images/homepage/icon_thead_dark.png) no-repeat 0 0
+}
+
+.table tr,.table th {
+    background-color: #1f253e;
+}
+
+.table tr.odd {
+    background-color: @c-con-bg;
+}
+
+.table tbody tr:hover {
+    background-color: @c-con-bg-h;
+}
+
+.table th {
+    color: @c-sub-title;
+}
+
+.table td {
+    color: @c-con;
+}
+
+.checkbox,
+.checkboxActive {
+    border: 0.05rem solid #408ef0;
+}
+
+.checkboxActive {
+    background-color: #408ef0;
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .checkbox,
+    .checkboxActive {
+        border: 0.2rem solid #408ef0;
+    }
+
+}

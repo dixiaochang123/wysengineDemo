@@ -1,0 +1,75 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.boxInner {
+    .subTitle {
+        .subtitleLeft {
+            border: 0.05rem solid @c-border;
+
+            a {
+                &:first-of-type,
+                &:nth-of-type(2):hover {
+                    background: url(images/warninginfordetails/sjl1.png) no-repeat 90% 55%;
+                    background-color: @c-white;
+                    color: #535353;
+                }
+
+                &:nth-of-type(2) {
+                    background: url(images/warninginfordetails/sjl2.png) no-repeat 90% 55%;
+                    background-color: #f7f7f7;
+                    color: #959595;
+                }
+
+            }
+
+        }
+
+    }
+
+    .arrow_box {
+        box-shadow: 0.4rem 0.4rem 1rem @c-border, -0.4rem 0.4rem 1rem @c-border;
+    }
+
+    .arrow_box.down:before {
+        border-bottom-color: @c-white;
+    }
+
+    .year {
+        background-color: @c-white;
+    }
+
+    .month {
+        background-color: #fafafa;
+    }
+
+    .year,
+    .month {
+        &:hover {
+            background-color: #fafafa;
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .boxInner {
+        .subTitle {
+            .subtitleLeft {
+                a {
+                    background-size: 1rem;
+                }
+
+            }
+
+        }
+
+    }
+
+}

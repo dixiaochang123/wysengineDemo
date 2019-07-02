@@ -1,0 +1,100 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .wrapper {
+        position: relative;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .box {
+        position: relative;
+        height: 1.4rem * @scale;
+
+        input {
+            width: 100%;
+        }
+
+    }
+
+    .button {
+        display: block;
+        width: 12rem * @scale;
+        height: 1.4rem * @scale;
+        line-height: 1.4rem * @scale;
+        padding-left: 0.5rem * @scale;
+        padding-right: 0.5rem * @scale;
+        border-radius: 0.1rem * @scale;
+        font-size: @f-t * @scale;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .menusWrapper {
+        display: none;
+        position: absolute;
+        width: 15rem * @scale;
+        height: 15rem * @scale;
+        overflow: hidden;
+
+        &.show {
+            position: absolute;
+            z-index: 1002;
+            display: block;
+        }
+
+        .menus {
+            width: 16rem * @scale;
+            height: 15rem * @scale;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: @c-white;
+            font-size: @f-s * @scale;
+
+            li {
+                height: 1.4rem * @scale;
+                line-height: 1.4rem * @scale;
+                padding-left: 0.5rem * @scale;
+                padding-right: 1rem * @scale;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+
+            .menuCheckbox {
+                display: inline-block;
+                vertical-align: middle;
+                width: 0.8rem * @scale;
+                height: 0.8rem * @scale;
+                margin-right: 0.5rem * @scale;
+            }
+
+        }
+
+    }
+
+}
+
+.baseStyle(1);
+
+/* bigscreen style */
+body[bigscreen='true'] {
+    .baseStyle(@big);
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(@msbig);
+}

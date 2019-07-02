@@ -1,0 +1,108 @@
+@import '../../styles/variables';
+
+.box {
+    width: 100%;
+    height: 100%;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-collapse: collapse;
+    font-size: @f-t;
+
+    thead,
+    tr,
+    th,
+    td {
+        height: 2rem;
+    }
+
+    th {
+        font-weight: normal;
+        transform: scale(0.8);
+        transform-origin: center;
+        -moz-transform: scale(0.8);
+        -moz-transform-origin: center;
+    }
+
+    td {
+        max-width: 5rem;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        img {
+            width: 0.7rem;
+            height: 0.9rem;
+            cursor: pointer;
+
+            &:first-of-type {
+                width: 0.9rem;
+                height: 0.9rem;
+                margin-right: 2rem;
+            }
+
+        }
+        .modifyPassword {
+            margin-left: 1.5rem;
+            cursor: pointer;
+        }
+        .btnWrapper {
+            display: inline-block;
+            width: 4rem;
+            height: 1.8rem;
+            margin-left: 1.5rem;
+            line-height: 1.8rem;
+            border-radius: 0.25rem;
+            font-size: 0.6rem;
+            cursor: pointer;
+            text-align: center;
+
+            img {
+                width: 0.4rem;
+                height: 0.8rem;
+                margin-right: 0.3rem;
+            }
+
+            img,
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+        }
+
+    }
+
+}
+
+/* bigscreen style */
+body[bigscreen='true'] {
+    .table thead,
+    .table th,
+    .table td {
+        font-size: @f-m;
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .table thead,
+    .table th,
+    .table td {
+        font-size: 1.2rem;
+
+        img {
+            width: 1.5rem;
+            &:nth-of-type(2) {
+                width: 1.2rem;
+                height: 1.5rem;
+            }
+        }
+
+    }
+
+}

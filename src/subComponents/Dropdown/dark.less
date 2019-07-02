@@ -1,0 +1,40 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.baseStyle(@borderScale) {
+    .button,
+    .buttonModal,
+    .buttonDisabled {
+        border: 0.05rem * @borderScale solid #121626;
+        color: #b2b4bd;
+        background-color: #1f253e;
+    }
+
+    .button:after,
+    .buttonModal:after,
+    .buttonDisabled:after {
+        border-top: 0.4rem solid #717c9c;
+    }
+
+    .buttonModal,
+    .buttonDisabled {
+        border: 0.05rem * @borderScale solid #121626;
+    }
+
+    .buttonModal:after {
+        border-top: 0.4rem solid @c-white;
+    }
+
+}
+
+.baseStyle(1);
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    // .baseStyle(2);
+    .button:after,
+    .buttonModal:after,
+    .buttonDisabled:after {
+        border-top: 0.8rem solid #717c9c;
+    }
+}

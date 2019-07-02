@@ -1,0 +1,66 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.box {
+    &.inModal {
+        .dateInput {
+            color: @c-black;
+
+            &:after {
+                border-top: 0.4rem solid #959595;
+            }
+
+        }
+    }
+
+}
+
+.dateInput {
+    border: 0.05rem solid @c-border;
+    background-color: #f7f7f7;
+    color: @c-con;
+}
+
+.dateInput:after {
+    border-top: 0.4rem solid #959595;
+}
+
+.datebox {
+    background-color: @c-white;
+    border: 0.05rem solid #959595;
+}
+
+.groupBtn,
+.dateBtn {
+    border: 0.05rem solid @c-grey;
+    color: @c-con;
+}
+
+.groupBtn:hover,
+.dateBtn:hover {
+    background-color: #78b4fe;
+    color: @c-white;
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .box {
+        &.inModal {
+            .dateInput {
+                // color: @c-black;
+
+                &:after {
+                    border-top: 0.6rem solid @c-grey;
+                }
+
+            }
+
+        }
+
+    }
+
+    .dateInput:after {
+        border-top: 0.6rem solid @c-grey;
+    }
+
+}

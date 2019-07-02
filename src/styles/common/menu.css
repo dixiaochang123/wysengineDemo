@@ -1,0 +1,42 @@
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    border-radius: 0.25rem;
+}
+
+.menuItem {
+    width: 100%;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    color: #fff;
+    font-size: 0.7rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.menuItem:hover {
+    background-color: rgba(0, 117, 194, 0.8);
+}
+
+/* dark theme style */
+body[theme='dark'] .menu {
+    z-index: 100;
+    box-shadow: 0 0 2rem #1c2138;
+}
+
+body[theme='dark'] .menuItem {
+    background-color: #242b47;
+}
+
+body[theme='dark'] .menuItem:hover {
+    background-color: #1f253f;
+}
+
+/* bigscreen style */
+body[bigscreen='true'] .menuItem {
+    font-size: 0.9rem;
+}

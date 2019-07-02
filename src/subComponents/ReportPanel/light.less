@@ -1,0 +1,24 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.lightStyle(@borderScale) {
+    .box,
+    .boxActive {
+        border: 0.05rem * @borderScale solid #a0a0a0;
+        color: @c-con;
+    }
+
+    .boxActive {
+        border: 0.05rem * @borderScale solid #408ef0;
+        background-color: #408ef0;
+        color: @c-white;
+    }
+
+}
+
+.lightStyle(1);
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .lightStyle(2);
+}

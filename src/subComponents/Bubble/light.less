@@ -1,0 +1,54 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.lightStyle(@scale) {
+    .bubblesArrow {
+        &:before {
+            border-bottom: 0.4rem * @scale solid @c-border;
+        }
+
+        &:after {
+            border-bottom: 0.4rem * @scale solid @c-white;
+        }
+
+        &.top {
+            &:before {
+                border-top: 0.4rem * @scale solid @c-border;
+            }
+
+            &:after {
+                border-top: 0.4rem * @scale solid @c-white;
+            }
+
+        }
+
+    }
+
+    .bubbles {
+        border: 0.05rem * @scale solid @c-border;
+        box-shadow: 0 0 0.5rem * @scale #f1f1f1;
+    }
+
+    .bubble {
+        background-color: @c-white;
+        color: @c-con;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+    }
+
+}
+
+.lightStyle(1);
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .lightStyle(@big);
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .lightStyle(@msbig);
+}

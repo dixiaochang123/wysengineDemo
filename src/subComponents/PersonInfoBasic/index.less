@@ -1,0 +1,126 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-left: 1.4rem * @scale;
+    padding-right: 1.4rem * @scale;
+
+    .infos {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: @f-t * @scale;
+
+        .label,
+        .val {
+            width: 100%;
+            height: 1.9rem * @scale;
+            line-height: 1.9rem * @scale;
+            text-align: center;
+        }
+
+        .label {
+            transform: scale(0.8);
+            transform-origin: center;
+            -moz-transform: scale(0.8);
+            -moz-transform-origin: center;
+        }
+
+        .val {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+    }
+
+    .btnWrapper {
+        width: 8.5rem * @scale;
+        height: 1.8rem * @scale;
+        line-height: 1.8rem * @scale;
+        margin: 8.2rem * @scale auto 0;
+        border-radius: 0.25rem * @scale;
+        font-size: @f-s * @scale;
+        cursor: pointer;
+        text-align: center;
+
+        img {
+            width: 0.4rem * @scale;
+            height: 0.8rem * @scale;
+            margin-right: 0.3rem * @scale;
+        }
+
+        img,
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    }
+
+    .tabs {
+        position: absolute;
+        top: -6rem;
+        right: 0;
+
+        .tab {
+            float: right;
+            width: 5.9rem * @scale;
+            height: 1.9rem * @scale;
+            line-height: 1.9rem * @scale;
+            cursor: pointer;
+            font-size: @f-s * @scale;
+            text-align: center;
+
+            &:first-child {
+                border-radius: 0 0.25rem * @scale 0.25rem * @scale 0;
+            }
+
+            &:last-child {
+                border-radius: 0.25rem * @scale 0 0 0.25rem * @scale;
+            }
+
+        }
+
+    }
+
+}
+
+.box {
+    .baseStyle(1);
+}
+
+/* bigscreen style */
+body[bigscreen='true'] {
+    .box {
+        .baseStyle(@big);
+
+        .tabs {
+            top: -6.5rem;
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .box {
+        .baseStyle(@msbig);
+
+        .tabs {
+            top: -7.5rem;
+        }
+
+    }
+
+}

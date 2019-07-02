@@ -1,0 +1,120 @@
+@import '../../styles/variables';
+
+.box {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 1rem;
+}
+
+.tab {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+
+    table {
+        margin-bottom: 1rem;
+    }
+
+}
+
+.companySelect {
+    width: 11rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0;
+}
+
+.overlayCls {
+    width: 11rem;
+    padding: 0;
+}
+
+.companySelect > div {
+    width: 11rem;
+}
+
+.modal1 {
+    input {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.2rem;
+        cursor: pointer;
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+    }
+
+    label {
+        span {
+            margin-right: 0;
+        }
+
+    }
+
+}
+
+.modalFormBtns1 {
+    text-align: left;
+    padding-left: 4rem;
+    margin: 0 auto 2.5rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.2rem 0.5rem;
+    font-size: @f-m;
+}
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    textarea {
+        width: 36rem;
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .modal1 {
+        font-size: @f-l;
+
+        input {
+            width: @f-l;
+            height: @f-l;
+        }
+
+    }
+
+    textarea {
+        font-size: @f-m;
+        margin-left: 1rem;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .modal1 {
+        font-size: 1.2rem;
+
+        input {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+    }
+
+    textarea {
+        margin-left: 3rem;
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    .modalFormBtns1 {
+        margin: 0 auto 7rem;
+        width: 46.9rem;
+    }
+
+}

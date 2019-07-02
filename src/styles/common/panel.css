@@ -1,0 +1,207 @@
+.panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 2.5rem;
+    border-radius: 0.25rem;
+    border: 0.05rem solid #e5e5e5;
+    background-color: #fff;
+    box-shadow: 0 0.2rem 0.2rem #f1f1f1;
+}
+
+.panelHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    border-bottom: 0.05rem solid #e5e5e5;
+    background-color: #fbfbfb;
+}
+
+.panelHeader:before,
+.panelHeader:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.panelHeader {
+    zoom: 1;
+}
+
+.panelTitle,
+.panelTitleRight {
+    color: #000;
+    font-size: 0.7rem;
+}
+
+.panelTitle {
+    float: left;
+}
+
+.panelTitleRight {
+    float: right;
+}
+
+.panelSubTitle {
+    float: left;
+    margin-left: 0.5rem;
+    color: #bfbfbf;
+    font-size: 0.6rem;
+}
+
+.panelAdd {
+    float: right;
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-top: 0.8rem;
+    margin-right: 1rem;
+    background: url(../../images/common/add.png) no-repeat 50% 50%;
+    background-size: 100% auto;
+    cursor: pointer;
+}
+
+.panelAdd:hover {
+    float: right;
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-top: 0.8rem;
+    margin-right: 1rem;
+    background: url(../../images/common/add_fk.png) no-repeat 50% 50%;
+    background-size: 100% auto;
+    cursor: pointer;
+}
+
+.panelExport {
+    float: right;
+    width: 0.8rem;
+    height: 1rem;
+    margin-top: 0.75rem;
+    background: url(../../images/models/icon_export.png) no-repeat 50% 50%;
+    background-size: 100% auto;
+    cursor: pointer;
+}
+
+.panelExport:hover {
+    float: right;
+    width: 0.8rem;
+    height: 1rem;
+    margin-top: 0.75rem;
+    background: url(../../images/models/icon_export_fk.png) no-repeat 50% 50%;
+    background-size: 100% auto;
+    cursor: pointer;
+}
+
+.panelLink {
+    float: right;
+    margin-top: 0.75rem;
+}
+
+.panelBody {
+    width: 100%;
+    height: 100%;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+}
+
+/* dark theme style */
+body[theme='dark'] .panel {
+    border: none;
+    background-color: #1f253e;
+    box-shadow: 0 0.2rem 0.2rem #0c0d14;
+}
+
+body[theme='dark'] .panelHeader {
+    background: -webkit-linear-gradient(to bottom, #2f385a, #272f4e);
+    background: -moz-linear-gradient(to bottom, #2f385a, #272f4e);
+    background: linear-gradient(to bottom, #2f385a, #272f4e);
+    border-bottom: none;
+    background-color: #2f385a;
+    box-shadow: 0 0 0.2rem #0c0d14;
+}
+
+body[theme='dark'] .panelTitle,
+body[theme='dark'] .panelTitleRight {
+    color: #fff;
+}
+
+body[theme='dark'] .panelAdd {
+    background: url(../../images/common/add_dark.png) no-repeat 50% 50%;
+}
+
+body[theme='dark'] .panelAdd:hover {
+    background: url(../../images/common/add_dark_fk.png) no-repeat 50% 50%;
+}
+
+body[theme='dark'] .panelExport {
+    background: url(../../images/models/icon_export_dark.png) no-repeat 50% 50%;
+}
+
+body[theme='dark'] .panelExport:hover {
+    background: url(../../images/models/icon_export_dark_fk.png) no-repeat 50% 50%;
+}
+
+/* miniscreen style */
+body[miniscreen='true'] .panelTitle,
+body[miniscreen='true'] .panelTitleRight {
+    font-size: 0.8rem;
+}
+
+/* bigscreen style */
+body[bigscreen='true'] .panelTitle,
+body[bigscreen='true'] .panelTitleRight {
+    font-size: 1rem;
+}
+
+body[bigscreen='true'] .panelSubTitle {
+    font-size: 0.8rem;
+}
+
+body[bigscreen='true'] .panelAdd,
+body[bigscreen='true'] .panelExport,
+body[bigscreen='true'] .panelExport:hover,
+body[bigscreen='true'] .panelAdd:hover {
+    background-size: 1rem;
+}
+
+/* microsoft bigscreen style */
+body[bigscreenmicrosoft='true'] .panel {
+    padding-top: 3rem;
+}
+
+body[bigscreenmicrosoft='true'] .panelHeader {
+    height: 3rem;
+    line-height: 3rem;
+}
+
+body[bigscreenmicrosoft='true'] .panelTitle,
+body[bigscreenmicrosoft='true'] .panelTitleRight,
+body[bigscreenmicrosoft='true'] .panelLink {
+    font-size: 1.4rem;
+}
+
+body[bigscreenmicrosoft='true'] .panelSubTitle {
+    margin-left: 2rem;
+    font-size: 1.2rem;
+}
+
+body[bigscreenmicrosoft='true'] .panelLink {
+    margin-top: 0.5rem;
+}
+
+body[bigscreenmicrosoft='true'] .panelAdd {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+body[bigscreenmicrosoft='true'] .panelExport {
+    width: 1.2rem;
+    height: 1.5rem;
+}

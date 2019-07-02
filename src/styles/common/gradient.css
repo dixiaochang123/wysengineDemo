@@ -1,0 +1,15 @@
+.lineGradient {
+    background: -webkit-linear-gradient(to bottom, #39436b, #272f4e);
+    background: -moz-linear-gradient(to bottom, #39436b, #272f4e);
+    background: linear-gradient(to bottom, #39436b, #272f4e);
+    background-color: #39436b;
+    box-shadow: 0 0.2rem 0.2rem #1c2138;
+}
+
+body[theme='dark'] .lineGradient {
+    background: -webkit-linear-gradient(to bottom, #39436b, #272f4e);
+    background: -moz-linear-gradient(to bottom, #39436b, #272f4e);
+    background: linear-gradient(to bottom, #39436b, #272f4e);
+    background-color: #39436b;
+    box-shadow: 0 0.2rem 0.2rem #1c2138;
+}

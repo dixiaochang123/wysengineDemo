@@ -1,0 +1,85 @@
+@import '../../styles/variables';
+
+.box {
+    width: 100%;
+    height: 100%;
+}
+
+.boxInner {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .subTitle {
+        width: 13rem;
+        height: 1.9rem;
+        line-height: 1.9rem;
+        font-size: @f-s;
+        display: flex;
+        border-radius: 0.25rem;
+        overflow: hidden;
+
+        a {
+            width: 50%;
+            text-align: center;
+        }
+
+    }
+
+    .parentLeftSpan {
+        height: 27rem;
+        margin-top: 1rem;
+    }
+
+}
+
+.flex {
+    height: 27rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    .leftChart {
+        width: 66%;
+        height: 100%;
+        margin-right: 1rem;
+    }
+
+    .rightChart {
+        height: 100%;
+        width: 33%;
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .boxInner {
+        .subTitle {
+            a {
+                font-size: @f-l;
+            }
+
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .boxInner {
+        .subTitle {
+            width: 20rem;
+            height: 3rem;
+            line-height: 3rem;
+
+            a {
+                font-size: 1.4rem;
+            }
+
+        }
+
+    }
+
+}

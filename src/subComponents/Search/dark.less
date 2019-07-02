@@ -1,0 +1,65 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.darkStyle(@scale, @borderScale) {
+    .box {
+        input {
+            border: 0.05rem * @borderScale solid @c-border;
+            background: url(images/common/ss.png) no-repeat 0.9rem * @scale center;
+            background-size: 0.9rem * @scale auto;
+            color: @c-con;
+
+            &::-webkit-input-placeholder,
+            &:-moz-placeholder,
+            &::-moz-placeholder,
+            &:-ms-input-placeholder {
+                color: #727d9d;
+            }
+
+        }
+
+        .label {
+            color: @c-con;
+        }
+
+    }
+
+}
+
+.darkStyle(1, 1);
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .box {
+        input {
+            background-size: 1rem;
+        }
+
+    }
+
+}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+}
+
+/* mediumscreen style: 1600 * 900 */
+body[mediumscreen='true'] {
+}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+
+}

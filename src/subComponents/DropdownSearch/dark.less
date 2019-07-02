@@ -1,0 +1,65 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.button {
+    border: 0.05rem solid #121626;
+    background-color: #1d233a;
+    color: #59627f;
+}
+
+.menusWrapper {
+    box-shadow: @bs;
+    border: 0.01rem solid;
+}
+
+.menus {
+    background-color: #1f253f;
+    width: 20rem !important;
+
+    li {
+        background-color: #1f253f;
+        color: @c-con;
+
+        &.menuItemChecked,
+        &:hover {
+            background-color: #242b47;
+            color: @c-white;
+
+            .menuCheckbox {
+                border: 0.05rem solid @c-blue-primary;
+                background-color: @c-blue-primary;
+            }
+
+        }
+
+        &.menuItemActive {
+            background-color: #242b47;
+            color: @c-white;
+            span {
+                position: relative;
+            }
+            span:last-of-type::after {
+                content:'';
+                background:url(../../images/common/gla.png) no-repeat;
+                background-size:1rem;
+                width: 1rem;
+                height: 1rem;
+                vertical-align:middle;
+                display:inline-block;
+                position:absolute;
+                left: 105%;
+                top: 35%;
+            }
+        }
+
+    }
+
+    .menuCheckbox {
+        border: 0.05rem solid @c-con;
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+}

@@ -1,0 +1,331 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1rem * @scale;
+    }
+
+    .boxInner > div {
+        height: 100%;
+    }
+
+    .chartOne {
+        position: relative;
+        width: 100%;
+        height: 12.7rem * @scale;
+        margin-bottom: 1rem * @scale;
+
+        .chartOneInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 2.5rem * @scale;
+            right: 0;
+            width: 30%;
+            height: calc(~'100% - 2.5rem');
+            height: -moz-calc(~'100% - 2.5rem');
+            height: -webkit-calc(~'100% - 2.5rem');
+            font-size: @f-t * @scale;
+        }
+
+        .chartOneText {
+            width: 100%;
+            margin-top: 0.35rem * @scale;
+            margin-bottom: 0.35rem * @scale;
+            word-break: break-all;
+            display: flex;
+        }
+
+        .chartOneLabel {
+            display: inline-block;
+            vertical-align: middle;
+            transform: scale(0.8);
+            transform-origin: center;
+            -moz-transform: scale(0.8);
+            -moz-transform-origin: center;
+            white-space: nowrap;
+        }
+
+    }
+
+    .chartRow {
+        width: 100%;
+        height: 12.7rem * @scale;
+        margin-bottom: 1rem * @scale;
+
+        .chartRowPanel {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            font-size: @f-xxh * @scale;
+        }
+
+        .chartRowLabel {
+            margin-top: 0.5rem * @scale;
+            font-size: @f-t * @scale;
+            transform: scale(0.8);
+            transform-origin: center;
+        }
+
+    }
+
+    .chartRowScale {
+        width: 100%;
+        height: 100%;
+        transform: scale(0.85);
+        transform-origin: center;
+        -moz-transform: scale(0.85);
+        -moz-transform-origin: center;
+
+        > div {
+            background-size: 100% auto;
+        }
+
+    }
+
+    .table {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 40rem * @scale;
+        height: 40rem * @scale;
+
+        .tableArrow {
+            position: relative;
+            margin-left: 0.5rem * @scale;
+            cursor: pointer;
+        }
+
+        .panelBody {
+            padding-left: 0.6rem * @scale;
+            padding-right: 0.6rem * @scale;
+        }
+
+        table {
+            margin-bottom: 0.5rem * @scale;
+        }
+
+    }
+
+    .filterWrapper {
+        position: absolute;
+        top: 2.5rem * @scale;
+        left: 0;
+        z-index: 10;
+    }
+
+    .btn {
+        position: absolute;
+        top: 0.75rem * @scale;
+        right: 1.4rem * @scale;
+        width: 0.8rem * @scale;
+        height: 1rem * @scale;
+        cursor: pointer;
+    }
+
+}
+
+.baseStyle(1);
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .table {
+        min-height: 47.5rem;
+    }
+
+}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+    .table {
+        min-height: 48.6rem;
+
+        table {
+            tr {
+                height: 3.5rem !important;
+            }
+
+        }
+
+    }
+
+}
+
+/* mediumscreen style: 1600 * 900 */
+body[mediumscreen='true'] {
+    .table {
+        min-height: 41.7rem;
+
+        table {
+            tr {
+                height: 1.95rem !important;
+            }
+
+        }
+
+    }
+
+}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {
+    .table {
+        min-height: 49.5rem;
+
+        table {
+            tr {
+                height: 2.3rem !important;
+            }
+
+        }
+
+    }
+
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .baseStyle(1.2);
+
+    .chartOne {
+        .chartOneInfo {
+            top: 2.5rem;
+            width: 37%;
+        }
+
+        .chartOneText {
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+            font-size: @f-m;
+        }
+
+        .chartOneLabel {
+            font-size: @f-m;
+        }
+
+    }
+
+    .chartRow {
+        .chartRowPanel {
+            font-size: @f-xxh * 1.5;
+        }
+
+        .chartRowLabel {
+            font-size: @f-t * 2;
+        }
+
+    }
+
+    .table {
+        height: 38.8rem;
+        min-height: 38.8rem;
+
+        table {
+            tr {
+                height: 1.8rem !important;
+            }
+
+        }
+
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(1.2);
+
+    .chartOne {
+        height: 15rem !important;
+
+        .chartOneInfo {
+            top: 2.5rem;
+        }
+
+        .chartOneText {
+            margin-top: 0.3rem;
+            margin-bottom: 0.3rem;
+            font-size: @f-l;
+        }
+
+        .chartOneLabel {
+            font-size: @f-l;
+        }
+
+    }
+
+    .chartRow {
+        height: 15rem !important;
+
+        .chartRowPanel {
+            font-size: @f-xxh * 1.5;
+        }
+
+        .chartRowLabel {
+            font-size: @f-t * 2;
+        }
+
+    }
+
+    .table {
+        height: 47.2rem;
+        min-height: 38rem;
+
+        table {
+            tr {
+                height: 2.2rem !important;
+            }
+
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(1.2);
+
+    .chartOne {
+        height: 15.9rem !important;
+
+        .chartOneInfo {
+            top: 2.5rem;
+        }
+
+        .chartOneText {
+            margin-top: 0.3rem;
+            margin-bottom: 0.3rem;
+            font-size: @f-h;
+        }
+
+        .chartOneLabel {
+            font-size: @f-h;
+        }
+
+    }
+
+    .chartRow {
+        height: 15.9rem !important;
+
+        .chartRowPanel {
+            font-size: @f-xxh * 2;
+        }
+
+        .chartRowLabel {
+            font-size: @f-t * 3;
+        }
+
+    }
+
+    .table {
+        height: 50rem;
+        min-height: 50rem;
+    }
+
+}

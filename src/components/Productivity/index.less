@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+
+.box {
+    width: 100%;
+    height: 100%;
+}
+
+.boxInner {
+    position: relative;
+    width: 100%;
+    height: 98%;
+
+    .subTitle {
+        width: 9rem;
+        height: 1.9rem;
+        line-height: 1.9rem;
+        text-align: center;
+        font-size: @f-s;
+        border-radius: 0.25rem;
+    }
+
+    .chart1 {
+        height: 27rem;
+        margin-top: 1rem;
+    }
+
+}
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .boxInner {
+        .subTitle {
+            width: 10rem;
+            height: 2.4rem;
+            line-height: 2.4rem;
+        }
+
+    }
+
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .boxInner {
+        .subTitle {
+            font-size: 0.9rem;
+        }
+
+    }
+
+    .chart1 {
+        height: 65rem;
+        margin-top: 1rem;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .boxInner {
+        .subTitle {
+            width: 15rem;
+            height: 3rem;
+            line-height: 3rem;
+            font-size: 1.4rem;
+        }
+
+    }
+
+}

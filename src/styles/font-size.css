@@ -1,0 +1,39 @@
+html {
+    font-size: 12px;
+}
+
+@media screen and (max-width:1366px) {
+    html {
+        font-size: 12px;
+        -webkit-text-size-adjust: none;
+    }
+
+}
+
+@media screen and (min-width:1367px) and (max-width:1440px) {
+    html {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width:1441px) and (max-width:1680px) {
+    html {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (min-width:1681px) and (max-width:1920px) {
+    html {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (min-width:3000px) {
+    html {
+        font-size: 30px;
+    }
+
+}

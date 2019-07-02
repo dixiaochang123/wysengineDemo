@@ -1,0 +1,37 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        width: 33.33%;
+        height: 100%;
+        padding-left: 1rem * @scale;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+    }
+
+    .boxInner {
+        position: relative;
+        padding-top: 2.5rem * @scale;
+
+        &.active {
+            border: 0.05rem solid @c-blue-primary !important;
+        }
+
+        &.active1 {
+            border: 0.05rem solid transparent !important;
+        }
+
+    }
+
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+}
+
+.baseStyle(1);

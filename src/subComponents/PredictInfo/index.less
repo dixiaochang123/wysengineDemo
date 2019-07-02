@@ -1,0 +1,101 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        padding-top: 0.7rem * @scale;
+        padding-bottom: 0.8rem * @scale;
+        border-radius: 0.25rem * @scale;
+    }
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 7.14%;
+        height: 100%;
+
+        .label {
+            font-size: @f-t * @scale;
+        }
+
+        .val {
+            display: block;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: @f-s * @scale;
+            text-align: center;
+        }
+
+    }
+
+    .colSpe {
+        position: relative;
+
+        .arrowDown {
+            position: absolute;
+            top: 0.2rem * @scale;
+            right: -1rem * @scale;
+        }
+
+    }
+
+    .dropdown,
+    .dropdownMenu {
+        width: 4rem * @scale;
+    }
+
+    .dropdown {
+        margin-top: 0.2rem * @scale;
+    }
+
+}
+
+.baseStyle(1);
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+    .col {
+        .label {
+            transform: scale(0.8);
+            transform-origin: center;
+        }
+
+    }
+
+}
+
+/* miniscreen style */
+body[miniscreen='true'] {
+    .dropdown,
+    .dropdownMenu {
+        width: 4rem;
+    }
+
+    .dropdown {
+        margin-top: 0;
+    }
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .baseStyle(@big);
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(@big);
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(@msbig);
+}

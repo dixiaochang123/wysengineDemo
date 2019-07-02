@@ -1,0 +1,93 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.boxShow {
+    border: 0.05rem solid #0c0d14;
+    background-color: rgba(31, 37, 63, 0.9);
+    box-shadow: 0 0.5rem 0.5rem #0c0d14;
+}
+
+.selectedFilterLabelSpe {
+    color: @c-con !important;
+}
+
+.boxArrow {
+    border-bottom: 0.4rem solid #14182c;
+}
+
+.boxArrowAfter {
+    border-bottom: 0.4rem solid #1f253f;
+}
+
+.filterLabel {
+    color: @c-white;
+}
+
+.filters span:hover {
+    background-color: #3c4874;
+    box-shadow: 0 0 0.2rem #495686 inset;
+}
+
+.filter.active:hover {
+    background-color: @c-blue-primary;
+    box-shadow: none;
+    color: @c-white;
+}
+
+.btn.search {
+    background: url(../../images/common/ss.png) no-repeat 40% center;
+    background-color: @c-blue-primary;
+    color: @c-white;
+
+    &:hover {
+        background-color: #78b4fe;
+    }
+
+}
+
+.btn.rest {
+    background: url(../../images/common/cz1.png) no-repeat 40% center;
+    background-color: #272f4e;
+
+    &:hover {
+        background: url(../../images/common/cz2.png) no-repeat 40% center;
+        background-color: #78b4fe;
+        background-size: 0.6rem;
+    }
+
+}
+
+.btn.search,
+.btn.rest {
+    text-indent: 2em;
+    background-size: 0.6rem;
+}
+
+.btn:hover,
+.btn:active,
+.filter.active {
+    background-color: @c-blue-primary;
+    color: @c-white;
+}
+
+.btn,
+.filter,
+.filterInput {
+    border-radius: 0.1rem;
+    border: 0.05rem solid @c-bg;
+    background-color: #272f4e;
+    color: #b2b4bd;
+}
+
+/* miniscreen style */
+body[miniscreen='true'] {
+    .btn.search,
+    .btn.rest {
+        background-size: 1rem;
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+}

@@ -1,0 +1,25 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.subTitle {
+    border: 0.05rem solid @c-border;
+
+    a {
+        &:first-of-type {
+            background-color: #f7f7f7;
+            color: #959595;
+        }
+
+        &:last-of-type {
+            background-color: @c-white;
+            color: #535353;
+        }
+
+    }
+
+}

@@ -1,0 +1,99 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .small,
+    .normal,
+    .large {
+        margin-top: -1rem * @scale;
+    }
+
+    .small {
+        width: 4.3rem * @scale;
+        height: 4.3rem * @scale;
+        line-height: 4.3rem * @scale;
+        border-radius: 2.15rem * @scale;
+        background-color: rgba(225, 189, 116, 0.5);
+
+        .label {
+            margin-top: 2.7rem * @scale;
+        }
+
+    }
+
+    .normal {
+        width: 5.5rem * @scale;
+        height: 5.5rem * @scale;
+        line-height: 5.5rem * @scale;
+        margin-left: -0.8rem * @scale;
+        margin-right: -0.8rem * @scale;
+        border-radius: 2.75rem * @scale;
+        background-color: rgba(140, 204, 69, 0.5);
+
+        .label {
+            margin-top: 2.1rem * @scale;
+        }
+
+    }
+
+    .large {
+        width: 7.7rem * @scale;
+        height: 7.7rem * @scale;
+        line-height: 7.7rem * @scale;
+        border-radius: 3.85rem * @scale;
+        background-color: rgba(63, 142, 239, 0.5);
+
+        .label {
+            margin-top: 1rem * @scale;
+        }
+
+    }
+
+    .count {
+        color: @c-white;
+        font-size: @f-m * @scale;
+    }
+
+    .label {
+        line-height: 0;
+        font-size: @f-t * @scale;
+    }
+
+}
+
+.baseStyle(1);
+
+/* bigscreen style */
+body[bigscreen='true'] {
+    .baseStyle(1.2);
+
+    .count {
+        font-size: @f-xxl;
+    }
+
+    .label {
+        font-size: @f-l;
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(1.5);
+
+    .count {
+        font-size: @f-he;
+    }
+
+    .label {
+        font-size: @f-xh;
+    }
+
+}

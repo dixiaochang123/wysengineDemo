@@ -1,0 +1,44 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.box {
+    .err {
+        color: @c-red;
+    }
+
+    .panel {
+        > div {
+            input {
+                border: 0.05rem solid @c-grey;
+                color: #000 !important;
+            }
+
+            ::-webkit-input-placeholder,
+            :-moz-placeholder,
+            ::-moz-placeholder,
+            :-ms-input-placeholder {
+                color: #000 !important;
+            }
+
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .box {
+        .panel {
+            > div {
+                input {
+                    border: 0.2rem solid @c-grey;
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box,
+    .boxActive {
+        display: inline-block;
+        vertical-align: top;
+        width: 4rem * @scale;
+        height: 4rem * @scale;
+        line-height: 4rem * @scale;
+        margin-top: 2.2rem * @scale;
+        margin-right: 2.4rem * @scale;
+        border-radius: 0.25rem * @scale;
+        cursor: pointer;
+        font-size: @f-t * @scale;
+        text-align: center;
+    }
+
+}
+
+.baseStyle(1);
+
+/* bigscreen style */
+body[bigscreen='true'] {
+    .baseStyle(1.5);
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(2);
+}

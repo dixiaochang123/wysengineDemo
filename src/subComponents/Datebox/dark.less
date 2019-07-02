@@ -1,0 +1,54 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.box {
+    &.inModal {
+        .dateInput {
+            border: 0.05rem solid #121626;
+            color: @c-white;
+
+            &:after {
+                border-top: 0.4rem solid @c-white;
+            }
+
+        }
+
+        .datebox {
+            border: 0.05rem solid #121626;
+        }
+
+    }
+
+}
+
+.dateInput {
+    border: 0.05rem solid #121626;
+    background-color: #272f4e;
+    color: @c-con;
+}
+
+.dateInput:after {
+    border-top: 0.4rem solid #717c9c;
+}
+
+.datebox {
+    background-color: #27304e;
+}
+
+.dateBtn,
+.groupBtn {
+    border: 0.05rem solid #121626;
+    color: @c-con;
+}
+
+.dateBtn:hover,
+.groupBtn:hover {
+    background-color: #3c4874;
+    color: @c-white;
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+
+
+}

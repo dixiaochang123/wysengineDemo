@@ -1,0 +1,457 @@
+@import '../../styles/variables';
+
+.boxInner {
+    .partsImg {
+
+        .partsImgLeft1 {
+            position: absolute;
+            width: 1207px;
+            padding: 0 0 0 40px;
+
+            .wfParts {
+                width: 1095px;
+                height: 825px;
+            }
+
+            .jcsrxt {
+                position: absolute;
+                top: 391px;
+                left: 70px;
+            }
+
+            .infoJcsrxt {
+                position: absolute;
+                top: 390px;
+                left: 96px;
+                width: 133px;
+                height: 42px;
+                cursor: pointer;
+            }
+
+            .jckzgxt {
+                position: absolute;
+                top: 492px;
+                left: 256px;
+            }
+
+            .infoJckzgxt {
+                position: absolute;
+                top: 492px;
+                left: 278px;
+                width: 123px;
+                height: 42px;
+                cursor: pointer;
+            }
+
+            .fdjxt {
+                position: absolute;
+                top: 302px;
+                left: 608px;
+            }
+
+            .infofdjxt {
+                position: absolute;
+                top: 303px;
+                left: 625px;
+                width: 85px;
+                height: 42px;
+                cursor: pointer;
+            }
+
+            .clxxt {
+                position: absolute;
+                top: 280px;
+                left: 735px;
+            }
+
+            .infoclxxt {
+                position: absolute;
+                top: 281px;
+                left: 753px;
+                width: 85px;
+                height: 42px;
+                cursor: pointer;
+            }
+
+            .ypxt {
+                position: absolute;
+                top: 166px;
+                left: 941px;
+            }
+
+            .infoypxt {
+                position: absolute;
+                top: 165px;
+                left: 953px;
+                width: 74px;
+                height: 42px;
+                cursor: pointer;
+            }
+
+            .bjxt {
+                position: absolute;
+                top: 461px;
+                left: 727px;
+            }
+
+            .infobjxt {
+                position: absolute;
+                top: 483px;
+                left: 766px;
+                width: 187px;
+                height: 42px;
+                cursor: pointer;
+            }
+
+            .fdjslxt {
+                position: absolute;
+                top: 566px;
+                left: 503px;
+            }
+
+            .infofdjslxt {
+                position: absolute;
+                top: 563px;
+                left: 576px;
+                width: 191px;
+                height: 42px;
+                cursor: pointer;
+            }
+
+            .phxt {
+                position: absolute;
+                top: 640px;
+                left: 542px;
+            }
+
+            .infophxt {
+                position: absolute;
+                top: 639px;
+                left: 598px;
+                width: 98px;
+                height: 42px;
+                cursor: pointer;
+            }
+
+            .yyxt {
+                position: absolute;
+                top: 700px;
+                left: 261px;
+            }
+
+            .infoyyxt {
+                position: absolute;
+                top: 727px;
+                left: 299px;
+                width: 172px;
+                height: 42px;
+                cursor: pointer;
+            }
+
+            .clxrhxt {
+                position: absolute;
+                top: 569px;
+                left: 84px;
+            }
+
+            .infoclxrhxt {
+                position: absolute;
+                top: 583px;
+                left: 137px;
+                width: 207px;
+                height: 42px;
+                cursor: pointer;
+            }
+        }
+
+        .partsImgRight {
+            height: 98%;
+
+            p {
+                font-size: 0.7rem;
+            }
+
+        }
+
+        .partsInfo {
+            padding: 0 1rem;
+            position: relative;
+            display: block;
+        }
+
+        table tr {
+            cursor: pointer;
+        }
+
+    }
+
+    .subTitle {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        a {
+            display: inline-block;
+            height: 1.9rem;
+            line-height: 1.9rem;
+            padding: 0 2rem 0 1.5rem;
+            font-size: @f-s;
+            text-align: center;
+            text-decoration: none;
+
+            &:first-of-type {
+                border-top-left-radius: 0.25rem;
+                border-bottom-left-radius: 0.25rem;
+            }
+
+            &:nth-of-type(2) {
+                border-top-right-radius: 0.25rem;
+                border-bottom-right-radius: 0.25rem;
+            }
+
+        }
+
+        .subTitleLeft {
+            position: relative;
+            border-radius: 0.25rem;
+        }
+
+    }
+
+}
+
+/* 弹出框 */
+.arrow_box {
+    position: absolute;
+    left: 33%;
+    top: 135%;
+    z-index: 11;
+    min-width: 6.1rem;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+.arrow_box1 {
+    position: absolute;
+    left: 55%;
+    top: 100%;
+    z-index: 11;
+    min-width: 6.1rem;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+.arrow_box:before,
+.arrow_box:after,
+.arrow_box1:before,
+.arrow_box1:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 0.05rem solid transparent;
+    pointer-events: none;
+}
+
+.arrow_box.down:before,
+.arrow_box1.down:before {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -0.5rem;
+    border-width: 0.5rem;
+}
+
+.year,
+.month {
+    height: 1.85rem;
+    line-height: 1.85rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.year {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.month {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.mc {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+}
+
+.heightTitle {
+    height: 2.3rem;
+    line-height: 2rem;
+    padding-left: 1.7rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    font-size: 0.7rem;
+}
+
+.tableParent {
+    height: 100%;
+}
+
+.tableParent1 {
+    padding: 0 1rem;
+}
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .boxInner {
+
+        /* 弹出框 */
+        .arrow_box {
+            position: absolute;
+            top: 130%;
+            left: 37%;
+        }
+
+        .mc {
+            top: -10%;
+            height: 110%;
+        }
+
+    }
+
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .WarningStatisticsTable1 table {
+        margin-bottom: 0.3rem;
+    }
+
+    td {
+        font-size: 0.6rem !important;
+    }
+
+    .subTitleLeft a {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .WarningStatisticsMain,
+    .WarningStatisticsMain1 {
+        height: 17.5rem !important;
+    }
+
+    .boxInner {
+        .partsImg {
+            .partsImgRight {
+                height: 72%;
+
+                table tr {
+                    height: 3.25rem !important;
+                }
+
+                table td,
+                table th {
+                    font-size: 0.7rem;
+
+                    span {
+                        font-size: 0.7rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .subTitleLeft a {
+        font-size: 1.4rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    /* 弹出框 */
+    .arrow_box {
+        left: 35%;
+        width: 10rem;
+        height: 5.7rem;
+    }
+
+    .year,
+    .month {
+        height: 2.85rem;
+        line-height: 2.85rem;
+        font-size: 1.2rem;
+    }
+
+    .WarningStatisticsMain1 {
+        height: 20rem !important;
+    }
+
+    .partsImg th,
+    .partsImg td,
+    .partsImg td span {
+        font-size: 0.6rem !important;
+    }
+
+    .partsImgRight div > span {
+        font-size: 0.8rem !important;
+
+        &:last-of-type {
+            width: 3.5rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+
+            &:after {
+                font-size: 1.2rem;
+            }
+
+        }
+
+    }
+
+    .partsImgRight {
+        li {
+            font-size: 0.8rem !important;
+
+            span {
+                font-size: 0.8rem !important;
+            }
+
+            &::after {
+                font-size: 1rem;
+            }
+
+        }
+
+        input {
+            width: 6rem !important;
+            height: 4rem;
+            line-height: 2rem;
+            font-size: 0.8rem !important;
+            text-align: center;
+        }
+
+        button {
+            width: 8rem;
+            font-size: 0.6rem !important;
+        }
+
+    }
+
+}

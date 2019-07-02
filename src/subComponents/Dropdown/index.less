@@ -1,0 +1,90 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .button {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .button,
+    .buttonModal,
+    .buttonDisabled {
+        position: relative;
+        width: 6.7rem * @scale;
+        height: 1.4rem * @scale;
+        line-height: 1.4rem * @scale;
+        padding-left: 0.5rem * @scale;
+        padding-right: 0.5rem * @scale;
+        font-size: @f-m * @scale;
+        cursor: pointer;
+        border-radius: 0.1rem * @scale;
+    }
+
+    .button:after,
+    .buttonModal:after,
+    .buttonDisabled:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0.5rem * @scale;
+        right: 0.5rem * @scale;
+        border-bottom: 0.4rem * @scale solid transparent;
+        border-left: 0.4rem * @scale solid transparent;
+        border-right: 0.4rem * @scale solid transparent;
+    }
+
+    .buttonDisabled:after {
+        display: none;
+    }
+
+}
+
+.baseStyle(1);
+
+/* miniscreen style */
+body[miniscreen='true'] {
+    .button {
+        width: 14rem;
+    }
+}
+
+/* bigscreen style */
+body[bigscreen='true'] {
+    .baseStyle(1);
+    .button {
+        width: 11rem;
+    }
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(2);
+
+    .button,
+    .buttonModal,
+    .buttonDisabled {
+        font-size: 1.2rem;
+        width: 10rem;
+        height: 2rem;
+        line-height: 2rem;
+    }
+
+    .button:after,
+    .buttonModal:after,
+    .buttonDisabled:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        border-bottom: 0.4rem solid transparent;
+        border-left: 0.4rem solid transparent;
+        border-right: 0.4rem solid transparent;
+    }
+
+    .button {
+        width: 13.4rem;
+    }
+
+}

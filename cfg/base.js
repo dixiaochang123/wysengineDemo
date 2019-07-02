@@ -1,0 +1,50 @@
+'use strict';
+let path = require('path');
+let defaultSettings = require('./defaults');
+
+// Additional npm or bower modules to include in builds
+// Add all foreign plugins you may need into this array
+// @example:
+// let npmBase = path.join(__dirname, '../node_modules');
+// let additionalPaths = [ path.join(npmBase, 'react-bootstrap') ];
+let additionalPaths = [];
+
+module.exports = {
+    additionalPaths: additionalPaths,
+    port: defaultSettings.port,
+    debug: true,
+    devtool: 'eval',
+    output: {
+        path: path.join(__dirname, '/../dist/assets'),
+        filename: 'app.js',
+        publicPath: defaultSettings.publicPath
+    },
+    devServer: {
+        compress: true,
+        contentBase: defaultSettings.srcPath,
+        historyApiFallback: true,
+        hot: true,
+        disableHostCheck: true,
+        host: '0.0.0.0',
+        port: defaultSettings.port,
+        publicPath: defaultSettings.publicPath,
+        noInfo: false
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx'],
+        alias: {
+            actions: `${defaultSettings.srcPath}/actions/`,
+            components: `${defaultSettings.srcPath}/components/`,
+            config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV,
+            constant: `${defaultSettings.srcPath}/constant/`,
+            images: `${defaultSettings.srcPath}/images/`,
+            reducers: `${defaultSettings.srcPath}/reducers/`,
+            styles: `${defaultSettings.srcPath}/styles/`,
+            subComponents: `${defaultSettings.srcPath}/subComponents/`,
+            utils: `${defaultSettings.srcPath}/utils/`,
+            vender: `${defaultSettings.srcPath}/vender/`,
+            'react/lib/ReactMount': 'react-dom/lib/ReactMount'
+        }
+    },
+    module: {}
+};

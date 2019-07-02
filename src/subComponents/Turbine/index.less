@@ -1,0 +1,95 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-top: 12rem * @scale;
+    }
+
+    .boxInner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 12rem * @scale;
+        padding-top: 2rem * @scale;
+        text-align: center;
+    }
+
+    .title {
+        margin-right: 0.5rem * @scale;
+        font-size: 1.8rem * @scale;
+    }
+
+    .subTitle {
+        font-size: 1rem * @scale;
+    }
+
+    .info {
+        margin-top: 2.5rem * @scale;
+    }
+
+    .infoItem {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 0.8rem * @scale;
+    }
+
+    .infoItemVal {
+        display: block;
+        margin-bottom: 0.8rem * @scale;
+        padding-left: 1.5rem * @scale;
+        padding-right: 1.5rem * @scale;
+        font-size: 1.5rem * @scale;
+    }
+
+    .canvas,
+    .canvas > div:first-child,
+    .canvas > div canvas {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.baseStyle(1);
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .infoItemVal {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+    .infoItemVal {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+}
+
+/* mediumscreen style: 1600 * 900 */
+body[mediumscreen='true'] {
+}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+}

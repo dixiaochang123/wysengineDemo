@@ -1,0 +1,30 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.boxInnerHead1 {
+	border: 0.05rem solid #e5e5e5;
+    background-color: #fff;
+    box-shadow: 0 0.2rem 0.2rem #f1f1f1;
+}
+
+.boxInnerHeadChild2 {
+	span {
+        border-left: solid 1px #DCDCDC;
+        color: #959595;
+    }
+}
+
+/* bigscreen style */
+body[bigscreen='true'] {
+    .boxInnerHead1 {
+    }
+
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .boxInnerHead1 {
+
+    }
+
+}

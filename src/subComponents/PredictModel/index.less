@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.25rem * @scale;
+        font-size: @f-xl * @scale;
+    }
+
+    .arrow {
+        position: relative;
+        margin-top: 0.5rem * @scale;
+        margin-left: 0.5rem * @scale;
+    }
+
+}
+
+.baseStyle(1);
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .baseStyle(@big);
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(@big);
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(@msbig);
+}

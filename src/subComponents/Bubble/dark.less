@@ -1,0 +1,53 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.darkStyle(@scale) {
+    .bubblesArrow {
+        &:before {
+            border-bottom: 0.4rem * @scale solid #14182c;
+        }
+
+        &:after {
+            border-bottom: 0.4rem * @scale solid #1f253f;
+        }
+
+        &.top {
+            &:before {
+                border-top: 0.4rem * @scale solid #14182c;
+            }
+
+            &:after {
+                border-top: 0.4rem * @scale solid #1f253f;
+            }
+
+        }
+
+    }
+
+    .bubbles {
+        box-shadow: 0 0 0.5rem * @scale #0c0d14;
+    }
+
+    .bubble {
+        background-color: #1f253f;
+        color: @c-con;
+
+        &:hover {
+            background-color:  @c-con-bg-h;
+        }
+
+    }
+
+}
+
+.darkStyle(1);
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .darkStyle(@big);
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .darkStyle(@msbig);
+}

@@ -1,0 +1,45 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.table {
+    thead {
+        tr {
+            background-color: #1f253e;
+            color: @c-sub-title;
+        }
+
+    }
+
+    tbody {
+        tr {
+            background-color: #1f253e;
+
+            &:hover {
+                // background-color: @c-con-bg-h;
+
+                th,
+                td {
+                    color: @c-white;
+                }
+
+            }
+
+            &.odd {
+                background-color: @c-con-bg;
+            }
+
+            td {
+                color: @c-white;
+            }
+
+        }
+
+        .btnWrapper {
+            color: @c-con;
+            border: 0.05rem solid #121626;
+            background-color: #272f4e;
+        }
+
+    }
+
+}

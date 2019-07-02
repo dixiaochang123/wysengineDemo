@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .panel {
+        margin-top: 3rem * @scale;
+        overflow: visible;
+    }
+
+    .panelBody {
+        height: 16rem * @scale;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+.baseStyle(1);
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(@big);
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(@msbig);
+}

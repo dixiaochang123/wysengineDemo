@@ -1,0 +1,153 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .bubblesArrow {
+        position: absolute;
+        top: 1rem * @scale;
+        left: 50%;
+        z-index: 20000;
+
+        &:before,
+        &:after {
+            position: absolute;
+            left: 50%;
+            display: block;
+            content: '';
+            width: 0;
+            height: 0;
+        }
+
+        &:before {
+            top: -0.8rem * @scale;
+            margin-left: -0.4rem * @scale;
+            border-top: 0.4rem * @scale solid transparent;
+            border-left: 0.4rem * @scale solid transparent;
+            border-right: 0.4rem * @scale solid transparent;
+        }
+
+        &:after {
+            top: -0.7rem * @scale;
+            margin-left: -0.38rem * @scale;
+            border-top: 0.38rem * @scale solid transparent;
+            border-left: 0.38rem * @scale solid transparent;
+            border-right: 0.38rem * @scale solid transparent;
+        }
+
+        &.top {
+            &:before {
+                top: -2rem * @scale;
+                margin-left: -0.4rem * @scale;
+                border-bottom: 0.4rem * @scale solid transparent;
+                border-left: 0.4rem * @scale solid transparent;
+                border-right: 0.4rem * @scale solid transparent;
+            }
+
+            &:after {
+                top: -2.1rem * @scale;
+                margin-left: -0.38rem * @scale;
+                border-bottom: 0.38rem * @scale solid transparent;
+                border-left: 0.38rem * @scale solid transparent;
+                border-right: 0.38rem * @scale solid transparent;
+            }
+
+        }
+
+    }
+
+    .bubbles {
+        position: absolute;
+        top: 1rem * @scale;
+        left: 50%;
+        z-index: 10000;
+        width: 6rem * @scale;
+        height: auto;
+        max-height: 9.5rem * @scale;
+        overflow: hidden;
+        margin-left: -3rem * @scale;
+        border-radius: 0.25rem * @scale;
+    }
+
+    .bubblesInner {
+        width: 110%;
+        height: 100%;
+        max-height: 9.5rem * @scale;
+        overflow-y: auto;
+    }
+
+    .bubble {
+        width: 100%;
+        height: 1.9rem * @scale;
+        line-height: 1.9rem * @scale;
+        text-align: center;
+
+        &:first-child {
+            border-radius: 0.25rem * @scale 0.25rem * @scale 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0 0.25rem * @scale 0.25rem * @scale;
+        }
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 0.7rem * @scale;
+            height: 0.7rem * @scale;
+            margin-right: 0.25rem * @scale;
+        }
+
+        span {
+            font-size: @f-s * @scale;
+        }
+
+    }
+
+}
+
+.baseStyle(1);
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .baseStyle(1.2);
+}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+    .baseStyle(1.2);
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+    .baseStyle(@big);
+
+    .bubblesArrow {
+        &:before {
+            top: -1.1rem;
+        }
+
+        &:after {
+            top: -1rem;
+        }
+
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .baseStyle(@big);
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .baseStyle(@msbig);
+}

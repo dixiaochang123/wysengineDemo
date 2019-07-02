@@ -1,0 +1,64 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.tabs {
+    border-radius: 0.25rem;
+}
+
+.tab {
+    border: 0.05rem solid @c-border;
+    border-right: none;
+    background: url(images/warninginfordetails/sjl2.png) no-repeat 93% 55%;
+    background-color: #f7f7f7;
+    color: #959595;
+}
+
+.tab:hover,
+.tabActive {
+    border: 0.05rem solid @c-border;
+    border-left: none;
+    background: url(images/warninginfordetails/sjl1.png) no-repeat 93% 55%;
+    background-color: @c-white;
+    color: #535353;
+}
+
+.tab:hover {
+    border: 0.05rem solid @c-border;
+    border-right: none;
+}
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+    .tab {
+        background: url(images/warninginfordetails/sjl2.png) no-repeat 94% 52%;
+        background-color: #f7f7f7;
+    }
+
+    .tab:hover,
+    .tabActive {
+        background: url(images/warninginfordetails/sjl1.png) no-repeat 94% 52%;
+        background-color: @c-white;
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .tab {
+        background: url(images/warninginfordetails/sjl2.png) no-repeat 95% 52%;
+        background-color: #f7f7f7;
+        background-size: 1rem;
+    }
+
+    .tabActive {
+        background: url(images/warninginfordetails/sjl1.png) no-repeat 95% 52%;
+        background-color: @c-white;
+        background-size: 1rem;
+    }
+
+}

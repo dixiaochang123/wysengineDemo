@@ -1,0 +1,137 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.lightStyle(@borderScale) {
+    .times {
+        .timesLegend {
+            color: @c-con;
+        }
+
+        .timeSec {
+            &:before {
+                background-color: #a0a0a0;
+            }
+
+        }
+
+        .timeGroups {
+            border: 0.05rem * @borderScale solid @c-border;
+
+            .timeGroup {
+                color: #a0a0a0;
+
+                &:first-child {
+                    > span {
+                        &:first-child {
+                            border-left: 0.05rem * @borderScale dashed transparent;
+                        }
+
+                    }
+
+                }
+
+                > span {
+                    border-left: 0.05rem * @borderScale dashed @c-border;
+
+                    &.hourPri {
+                        border-left: 0.05rem * @borderScale dashed transparent;
+                        background-color: #8dcd43;
+                        color: @c-white;
+                    }
+
+                    &.hourSec {
+                        border-left: 0.05rem * @borderScale dashed transparent;
+                        background-color: @c-border;
+                        color: @c-white;
+                    }
+
+                }
+
+                .timeGroupDate {
+                    color: @c-con;
+
+                    &:after {
+                        border-top: 0.4rem solid @c-border;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .panels {
+        .panel {
+            .panelInner {
+                background-color: @c-white;
+                border: 0.05rem * @borderScale solid @c-border;
+                box-shadow: @bs;
+
+                &:before,
+                &:after {
+                    background-color: #eaeaea;
+                    box-shadow: @bs;
+                }
+
+            }
+
+            .panelInnerFooter {
+                background-color: #ebebeb;
+
+                &:after {
+                    background-color: @c-white;
+                }
+
+            }
+
+            .panelTitle {
+                color: @c-black;
+            }
+
+        }
+
+    }
+
+    .maintanceTime {
+        .maintanceTimePri {
+            color: @c-con;
+        }
+
+        .maintanceTimeSec {
+            color: #a0a0a0;
+        }
+
+    }
+
+    .maintanceInfo {
+        border: 0.05rem * @borderScale solid @c-border;
+        color: #a0a0a0;
+    }
+
+    .solutions {
+        color: @c-con;
+
+        .solutionSlider {
+            li {
+                background-color: #a0a0a0;
+
+                &.active {
+                    background-color: @c-blue-primary;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.lightStyle(1);
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .lightStyle(2);
+}

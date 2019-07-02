@@ -1,0 +1,78 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.boxInner {
+    background-color: @c-bg;
+
+    .subTitle {
+        .subTitleLeft {
+            a {
+                &:first-of-type {
+                    background: url(images/warninginfordetails/sj2.png) no-repeat 90% 55%;
+                    background-color: #1a2037;
+                    color: @c-sub-title;
+                }
+
+                &:first-of-type:hover,
+                &:nth-of-type(2) {
+                    background: url(images/warninginfordetails/sj1.png) no-repeat 90% 55%;
+                    background-color: #1f253e;
+                    color: @c-white;
+                }
+
+            }
+
+        }
+
+    }
+
+    .arrow_box {
+        border: 0.05rem solid #1f253e;
+        box-shadow: 0.4rem 0.4rem 1rem @c-border, -0.4rem 0.4rem 1rem @c-border;
+    }
+
+    .arrow_box.down:before {
+        border-bottom-color: #1f253e;
+    }
+
+    .year {
+        color: @c-white;
+        background-color: #1f253e;
+    }
+
+    .month {
+        color: @c-white;
+        background-color: @c-con-bg;
+    }
+
+    .year,
+    .month {
+        &:hover {
+            background-color: @c-con-bg-h;
+        }
+
+    }
+
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .boxInner {
+        .subTitle {
+            .subTitleLeft {
+                a {
+                    background-size: 1rem;
+                }
+
+            }
+
+        }
+
+    }
+
+}

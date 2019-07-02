@@ -1,0 +1,80 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.box {
+    color: @c-white;
+}
+
+.boxInner {
+    background-color: @c-bg;
+
+    .subTitle {
+        .subtitleLeft {
+            a {
+                &:first-of-type,
+                &:nth-of-type(2):hover {
+                    color: @c-white;
+                    background: url(images/warninginfordetails/sj1.png) no-repeat 90% 55%;
+                    background-color: #1f253e;
+                }
+
+                &:nth-of-type(2) {
+                    color: #727d9d;
+                    background: url(images/warninginfordetails/sj2.png) no-repeat 90% 55%;
+                    background-color: #1a2037;
+                }
+
+            }
+
+        }
+
+    }
+
+    .arrow_box {
+        border: 0.05rem solid #1f253e;
+        box-shadow: 0.4rem 0.4rem 1rem @c-border, -0.4rem 0.4rem 1rem @c-border;
+    }
+
+    .arrow_box.down:before {
+        border-bottom-color: #1f253e;
+    }
+
+    .year {
+        background-color: #1f253e;
+    }
+
+    .month {
+        background-color: #242b47;
+    }
+
+    .year,
+    .month {
+        &:hover {
+            background-color: @c-con-bg-h;
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .boxInner {
+        .subTitle {
+            .subtitleLeft {
+                a {
+                    background-size: 1rem;
+                }
+
+            }
+
+        }
+
+    }
+
+}

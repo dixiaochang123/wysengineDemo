@@ -1,0 +1,23 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.boxInner {
+    border: 0.05rem solid @c-border;
+    background-color: @c-white;
+}
+
+.title {
+    color: @c-black;
+}
+
+.count {
+    color: #aaa;
+}
+
+/* misrosoft bigscreen style */
+body[bigscreenmicrosoft='true'] {
+    .boxInner {
+        border: 0.1rem solid @c-border;
+    }
+
+}

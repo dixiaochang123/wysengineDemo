@@ -1,0 +1,93 @@
+@import '../../styles/variables-dark';
+@import './index.less';
+
+.darkStyle(@borderScale) {
+    .tabs {
+        border: 0.05rem * @borderScale solid @c-border;
+
+        .tab {
+            background-color: #272f4e;
+            color: #b2b4bd;
+
+            &.tabActive {
+                background-color: #408ef0;
+                color: #fff;
+            }
+
+        }
+
+    }
+
+    .btn {
+        background: url(images/models/icon_export_dark.png) no-repeat 50% 50%;
+        background-size: 1rem;
+    }
+    .btn:hover {
+        background: url(images/models/icon_export_dark_fk.png) no-repeat 50% 50%;
+        background-size: 1rem;
+    }
+
+    .varPanels,
+    .varPanelsShow {
+        background-color: #1f253e;
+        box-shadow: 0.1rem * @borderScale 0 0.5rem @c-border;
+    }
+
+    .varPanel {
+        > span {
+            color: #a4a6b1;
+        }
+
+    }
+
+    .varPanelLabel {
+        border: 0.05rem * @borderScale solid @c-bg;
+        background-color: #272f4e;
+        color: @c-con;
+    }
+
+    .varPanelLabel:hover,
+    .varPanelLabelActive,
+    .selectedVarOnly {
+        border: 0.05rem * @borderScale solid @c-blue-primary;
+        background-color: @c-blue-primary;
+        color: @c-white;
+    }
+
+    .selectedVar,
+    .selectedVarClose {
+        color: @c-white;
+    }
+
+    .switchTitle,
+    .switchTitleOpen {
+        background-color: #2f385a;
+        box-shadow: @bs;
+        color: @c-con;
+    }
+
+    .switchTitle:after {
+        border-left: 0.4rem solid @c-con;
+    }
+
+    .switchTitleOpen:after {
+        border-right: 0.4rem solid @c-con;
+    }
+
+    .clear {
+        border-bottom: 0.05rem * @borderScale solid @c-bg;
+    }
+
+}
+
+.darkStyle(1);
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .darkStyle(1);
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .darkStyle(2);
+}

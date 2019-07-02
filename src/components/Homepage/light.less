@@ -1,0 +1,36 @@
+@import '../../styles/variables-light';
+@import './index.less';
+
+.lightStyle(@borderRadius) {
+    .warningCountText {
+        color: #aaa;
+    }
+
+    .tables {
+        .tablePanels {
+            overflow: hidden;
+            border-radius: 0.25rem * @borderRadius;
+            border: 0.05rem * @borderRadius solid @c-border;
+            box-shadow: @bs;
+        }
+
+        .tablePanel {
+            box-shadow: none;
+            border: none;
+        }
+
+    }
+
+}
+
+body,
+.box {
+    background-color: @c-bg;
+}
+
+.lightStyle(1);
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+    .lightStyle(2);
+}

@@ -1,0 +1,78 @@
+@import '../../styles/variables';
+
+.baseStyle(@scale) {
+    .box {
+        margin-top: 0.5rem * @scale;
+
+        input {
+            width: 18.75rem * @scale;
+            height: 1.4rem * @scale;
+            line-height: 1.4rem * @scale;
+            margin-right: 1rem * @scale;
+            padding-left: 2rem * @scale;
+            border-radius: 0.25rem * @scale;
+            font-size: @f-t * @scale;
+        }
+
+        .label {
+            cursor: pointer;
+            font-size: @f-s * @scale;
+        }
+
+    }
+
+}
+
+.baseStyle(1);
+
+/* miniscreen style: 1366 * 768 */
+body[miniscreen='true'] {
+}
+
+/* smallscreen style: 1440 * 900 */
+body[smallscreen='true'] {
+}
+
+/* mediumscreen style: 1600 * 900 */
+body[mediumscreen='true'] {
+}
+
+/* highmediumscreen style: 1680 * 1050  */
+body[highmediumscreen='true'] {
+}
+
+/* highscreen style: 3840 * 2160 */
+body[highscreen='true'] {
+}
+
+/* bigscreen style: 4096 * 2160 */
+body[bigscreen='true'] {
+    .box {
+        input,
+        .label {
+            font-size: @f-m;
+        }
+
+    }
+
+}
+
+/* misrosoft bigscreen style: 7680 * 2160 */
+body[bigscreenmicrosoft='true'] {
+
+    .box input {
+        width: 20rem;
+        height: 2rem;
+        line-height: 2rem;
+        margin-right: 1rem;
+        padding-left: 4rem;
+        background-size: 1.4rem auto;
+        background-position: 1rem;
+        font-size: 1.4rem;
+    }
+
+    .box .label {
+        font-size: 1.4rem;
+    }
+
+}
