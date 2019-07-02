@@ -7,7 +7,7 @@
     wysengineDemo\favicon.ico
     wysengineDemo\faviconmy.ico
 
-/* 打包UI改版智擎版、协和 */
+/* 打包UI改版XX版 */
     /* 主要修改 */
     wysengineDemo\src\constant\index.js
     wysengineDemo\src\index.html

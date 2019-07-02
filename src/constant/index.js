@@ -1,30 +1,12 @@
 let Constant = {
     // wysengine project config
-    // API_ROOT: 'http://wysenginewd1.chinacloudapp.cn:8080/docean',
-    // PROJECT: 'wysengine',
-    // PROJECT_NAME: '智擎风电智慧运维及预警分析平台',
-
-    // mingyang dev project config
-    // API_ROOT: 'http://mingyang7.chinanorth.cloudapp.chinacloudapi.cn:8080/docean',
-    // PROJECT: 'mingyang',
-    // PROJECT_NAME: '明阳智慧能源大数据应用系统',
-
-    // mingyang dev project config
-    // API_ROOT: 'http://mingyang6.chinanorth.cloudapp.chinacloudapi.cn:8080/docean',
-    // PROJECT: 'mingyang',
-    // PROJECT_NAME: '明阳智慧能源大数据应用系统',
 
     // mingyang production config
     // API_ROOT: 'http://10.0.10.40:8080/docean',
     API_ROOT: 'http://mingyang6.chinanorth.cloudapp.chinacloudapi.cn:9080/docean',
     // API_ROOT: 'http://mingyang6.chinanorth.cloudapp.chinacloudapi.cn:9080/doceantest',
     PROJECT: 'mingyang',
-    PROJECT_NAME: '明阳智慧能源大数据应用系统',
-
-    // xiehe project config
-    // API_ROOT: 'http://surfing2.chinanorth.cloudapp.chinacloudapi.cn:8080/docean',
-    // PROJECT: 'xiehe',
-    // PROJECT_NAME: '智擎风电智慧运维及预警分析平台',
+    PROJECT_NAME: 'xx智慧能源大数据应用系统',
 
     AREA_COLORS: {
         '华东': '#007dd4',
